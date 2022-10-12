@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppModelo.View.Windows.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,16 +16,7 @@ namespace AppModelo.View.Windows.Cadastros
         public frmCadastroFuncionario()
         {
             InitializeComponent();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
+            Componentes.FormatarCamposObrigatorios(this);
         }
     }
 }
