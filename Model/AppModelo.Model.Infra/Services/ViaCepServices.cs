@@ -36,6 +36,7 @@ namespace AppModelo.Model.Infra.Services
 
             //Converte a string json para nossa classe ViaCepWrapper
             cepWrapper = JsonConvert.DeserializeObject<ViaCepWrapper>(resultContent);
+
             return cepWrapper;
         }
     }
