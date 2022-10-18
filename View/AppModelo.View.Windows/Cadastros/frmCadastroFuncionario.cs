@@ -85,8 +85,7 @@ namespace AppModelo.View.Windows.Cadastros
             //pega a data de hoje e acrescenta 1 dia
             
             var dataNascimento = DateTime.Parse(txtDataNascimento.Text);
-            var dateTime = (DateTime.Now.AddDays(1));
-
+            var dateTime = (DateTime.Now.AddDays(0));
 
             if (dataNascimento > dateTime)
             {
