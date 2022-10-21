@@ -166,7 +166,7 @@
             this.txtDataNascimento.TabIndex = 9;
             this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
-            this.txtDataNascimento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDataNascimento_Validating);
+            //this.txtDataNascimento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDataNascimento_Validating);
             // 
             // txtEmail
             // 
@@ -175,7 +175,7 @@
             this.txtEmail.Size = new System.Drawing.Size(207, 27);
             this.txtEmail.TabIndex = 11;
             this.txtEmail.Tag = "Obrigatorio";
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            //this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label6
             // 
