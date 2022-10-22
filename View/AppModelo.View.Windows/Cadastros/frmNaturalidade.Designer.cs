@@ -34,8 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.gvNacionalidades = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
+            this.gvNaturalidades = new System.Windows.Forms.DataGridView();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,21 +89,34 @@
             this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
-            // gvNacionalidades
+            // gvNaturalidades
             // 
-            this.gvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNacionalidades.Location = new System.Drawing.Point(15, 132);
-            this.gvNacionalidades.Name = "gvNacionalidades";
-            this.gvNacionalidades.Size = new System.Drawing.Size(381, 122);
-            this.gvNacionalidades.TabIndex = 13;
+            this.gvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvNaturalidades.Location = new System.Drawing.Point(15, 132);
+            this.gvNaturalidades.Name = "gvNaturalidades";
+            this.gvNaturalidades.Size = new System.Drawing.Size(381, 122);
+            this.gvNaturalidades.TabIndex = 13;
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Location = new System.Drawing.Point(346, 38);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.chkAtivo.TabIndex = 14;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
             // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 289);
-            this.Controls.Add(this.gvNacionalidades);
+            this.Controls.Add(this.chkAtivo);
+            this.Controls.Add(this.gvNaturalidades);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label2);
@@ -111,7 +125,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmNaturalidade";
             this.Text = "frmNaturalidade";
-            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +139,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView gvNacionalidades;
+        private System.Windows.Forms.DataGridView gvNaturalidades;
+        private System.Windows.Forms.CheckBox chkAtivo;
     }
 }

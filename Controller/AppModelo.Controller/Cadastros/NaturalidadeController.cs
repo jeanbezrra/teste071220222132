@@ -13,7 +13,7 @@ namespace AppModelo.Controller.Cadastros
             return resposta;
         }
 
-        public List<NaturalidadeEntity> ObterTodasNacionalidades()
+        public List<NaturalidadeEntity> ObterTodasNaturalidades()
         {
             var repositorio = new NaturalidadeRepository();
             var resposta = repositorio.ObterTodos();

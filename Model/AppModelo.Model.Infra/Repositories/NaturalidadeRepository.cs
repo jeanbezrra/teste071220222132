@@ -1,6 +1,8 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using Dapper;
 using MySql.Data.MySqlClient;
+using MySql.Data.Types;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -11,8 +13,11 @@ namespace AppModelo.Model.Infra.Repositories
         // insert (create) - select (read) - update (update) - delete (delete)
         public bool Inserir(string descricao)
         {
+            var dataCriacao = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss");
+            var dataAlteracao = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss");
+
             //string interpolation $
-            var sql = $"INSERT INTO naturalidades (descricao) VALUES ('{descricao}')";
+            var sql = $"INSERT INTO naturalidades (descricao, dataCriacao, dataAlteracao) VALUES ('{descricao}', '{dataCriacao}', '{dataAlteracao}')";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);

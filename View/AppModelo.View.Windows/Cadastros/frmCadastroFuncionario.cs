@@ -12,6 +12,8 @@ namespace AppModelo.View.Windows.Cadastros
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
 
+        private NaturalidadeController _naturalidadeController = new NaturalidadeController();
+
         public frmCadastroFuncionario()
         {
             InitializeComponent();
@@ -19,6 +21,8 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
 
+            cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
+            cmbNaturalidade.DisplayMember = "Descricao";
         }
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
