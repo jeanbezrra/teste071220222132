@@ -27,13 +27,6 @@ namespace AppModelo.View.Windows.Cadastros
 
             }
         }
-        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
-        {
-            var ativo = _naturalidadeController.Cadastrar(chkAtivo.Checked);
-            if (chkAtivo.Checked == true) 
-            {
-                
-            }
-        }
+        
     }
 }
