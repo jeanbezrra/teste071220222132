@@ -1,7 +1,6 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using Dapper;
 using MySql.Data.MySqlClient;
-using MySql.Data.Types;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,13 +10,12 @@ namespace AppModelo.Model.Infra.Repositories
     public class NaturalidadeRepository
     {
         // insert (create) - select (read) - update (update) - delete (delete)
-        public bool Inserir(string descricao)
+        public bool Inserir(string descricao, bool status)
         {
-            var dataCriacao = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss");
-            var dataAlteracao = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss");
+            var agora = DateTime.Now.ToString("u");
 
             //string interpolation $
-            var sql = $"INSERT INTO naturalidades (descricao, dataCriacao, dataAlteracao) VALUES ('{descricao}', '{dataCriacao}', '{dataAlteracao}')";
+            var sql = $"INSERT INTO naturalidades (descricao, dataCriacao, dataAlteracao, ativo) VALUES ('{descricao}', '{agora}', '{agora}', {status})";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
@@ -44,7 +42,7 @@ namespace AppModelo.Model.Infra.Repositories
         }
         public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
         {
-            var sql = "SELECT id, descricao FROM naturalidades ORDER BY descricao DESC WHERE ativo = true";
+            var sql = "SELECT id, descricao FROM naturalidades ativo = true";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             //todo comando select usa-se .Query<>

@@ -1,4 +1,5 @@
-﻿using AppModelo.View.Windows.Cadastros;
+﻿using AppModelo.Model.Domain.Validators;
+using AppModelo.View.Windows.Cadastros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,14 @@ namespace AppModelo.View.Windows
 
         private void btnEntrarMDI_Click(object sender, EventArgs e)
         {
+            var email = txtEmailLogin.Text;
+            var emailValido = Validadores.EmailEValido(email);
+            if (emailValido is false)
+            {
+                errorProvider1.SetError(txtEmailLogin, "Email Inválido");
+                return;
+            }
+            errorProvider1.Clear();
             var form = new frmPrincipal();
             form.Show();
             this.Hide();

@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmailLogin = new System.Windows.Forms.TextBox();
+            this.txtSenhaLogin = new System.Windows.Forms.TextBox();
             this.lblRecuperarSenha = new System.Windows.Forms.Label();
             this.btnEntrarMDI = new System.Windows.Forms.Button();
             this.lblSuporteEContato = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,19 +60,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha";
             // 
-            // textBox1
+            // txtEmailLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtEmailLogin.Location = new System.Drawing.Point(26, 84);
+            this.txtEmailLogin.Name = "txtEmailLogin";
+            this.txtEmailLogin.Size = new System.Drawing.Size(250, 20);
+            this.txtEmailLogin.TabIndex = 2;
             // 
-            // textBox2
+            // txtSenhaLogin
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtSenhaLogin.Location = new System.Drawing.Point(26, 137);
+            this.txtSenhaLogin.Name = "txtSenhaLogin";
+            this.txtSenhaLogin.Size = new System.Drawing.Size(250, 20);
+            this.txtSenhaLogin.TabIndex = 3;
             // 
             // lblRecuperarSenha
             // 
@@ -107,6 +110,10 @@
             this.lblSuporteEContato.Text = "Suporte e contato";
             this.lblSuporteEContato.Click += new System.EventHandler(this.lblSuporteEContato_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,8 +124,8 @@
             this.Controls.Add(this.lblSuporteEContato);
             this.Controls.Add(this.btnEntrarMDI);
             this.Controls.Add(this.lblRecuperarSenha);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSenhaLogin);
+            this.Controls.Add(this.txtEmailLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -126,6 +133,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,10 +143,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmailLogin;
+        private System.Windows.Forms.TextBox txtSenhaLogin;
         private System.Windows.Forms.Label lblRecuperarSenha;
         private System.Windows.Forms.Button btnEntrarMDI;
         private System.Windows.Forms.Label lblSuporteEContato;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
