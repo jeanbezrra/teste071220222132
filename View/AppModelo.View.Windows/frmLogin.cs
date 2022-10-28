@@ -1,4 +1,5 @@
-﻿using AppModelo.Model.Domain.Validators;
+﻿using AppModelo.Controller.Seguranca;
+using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Cadastros;
 using System;
 using System.Collections.Generic;
@@ -19,28 +20,32 @@ namespace AppModelo.View.Windows
             InitializeComponent();
         }
 
-        private void lblRecuperarSenha_Click(object sender, EventArgs e)
+        private void btnLogar_Click(object sender, EventArgs e)
         {
-            var form = new frmRecuperarSenha();
-            form.ShowDialog();
-        }
-
-        private void btnEntrarMDI_Click(object sender, EventArgs e)
-        {
-            var email = txtEmailLogin.Text;
-            var emailValido = Validadores.EmailEValido(email);
-            if (emailValido is false)
+            //1 passo validar o e-mail
+            var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
+            if (emailEhValido is false)
             {
-                errorProvider1.SetError(txtEmailLogin, "Email Inválido");
+                errorProvider1.SetError(txtEmail, "Seu e-mail está errado");
+                txtEmail.Focus();
                 return;
             }
-            errorProvider1.Clear();
-            var form = new frmPrincipal();
-            form.Show();
-            this.Hide();
+
+            var controller = new UsuarioController();
+            var usuarioEncontrado = controller.EfetuarLogin(txtEmail.Text, txtSenha.Text);
+            if (usuarioEncontrado)
+            {
+                var form = new frmPrincipal();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha não encontrado");
+            }
         }
 
-        private void lblSuporteEContato_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppModelo.Controller.Seguranca;
+using AppModelo.Model.Domain.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,17 +17,27 @@ namespace AppModelo.View.Windows
         public frmRecuperarSenha()
         {
             InitializeComponent();
+
         }
 
-        private void btnEmailRecuperarSenha_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Senha recuperada com sucesso, verifique seu email");
-            Close();
+            this.Hide();
         }
 
-        private void btnCancelarRecupSenha_Click(object sender, EventArgs e)
+        private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
-            Close();
+            var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
+            if (emailEhValido is false)
+            {
+                errorProvider1.SetError(txtEmail, "Seu e-mail está errado");
+                txtEmail.Focus();
+                return;
+            }
+
+            var controller = new UsuarioController();
+            var resultado = controller.RecuperarSenha(txtEmail.Text);
+            MessageBox.Show(resultado);
         }
     }
 }
