@@ -68,6 +68,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -166,7 +167,6 @@
             this.txtDataNascimento.TabIndex = 9;
             this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
-            //this.txtDataNascimento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDataNascimento_Validating);
             // 
             // txtEmail
             // 
@@ -175,7 +175,6 @@
             this.txtEmail.Size = new System.Drawing.Size(207, 27);
             this.txtEmail.TabIndex = 11;
             this.txtEmail.Tag = "Obrigatorio";
-            //this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label6
             // 
@@ -420,11 +419,23 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // btnCadastrarFuncionario
+            // 
+            this.btnCadastrarFuncionario.Enabled = false;
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(153, 509);
+            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(467, 32);
+            this.btnCadastrarFuncionario.TabIndex = 39;
+            this.btnCadastrarFuncionario.Text = "Cadastrar";
+            this.btnCadastrarFuncionario.UseVisualStyleBackColor = true;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 499);
+            this.ClientSize = new System.Drawing.Size(787, 559);
+            this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.txtTelefoneContato);
             this.Controls.Add(this.label17);
@@ -516,5 +527,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnCadastrarFuncionario;
     }
 }

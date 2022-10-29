@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,7 +45,7 @@
             // 
             // btnLogar
             // 
-            this.btnLogar.Location = new System.Drawing.Point(40, 415);
+            this.btnLogar.Location = new System.Drawing.Point(40, 380);
             this.btnLogar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(345, 41);
@@ -101,7 +102,7 @@
             this.lblSuporteContato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSuporteContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSuporteContato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblSuporteContato.Location = new System.Drawing.Point(164, 481);
+            this.lblSuporteContato.Location = new System.Drawing.Point(164, 446);
             this.lblSuporteContato.Name = "lblSuporteContato";
             this.lblSuporteContato.Size = new System.Drawing.Size(93, 13);
             this.lblSuporteContato.TabIndex = 7;
@@ -109,9 +110,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(40, 40);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(345, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(341, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -135,7 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(444, 505);
+            this.ClientSize = new System.Drawing.Size(427, 478);
             this.Controls.Add(this.lblSuporteContato);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

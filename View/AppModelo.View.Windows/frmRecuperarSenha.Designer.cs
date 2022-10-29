@@ -93,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(489, 250);
+            this.ClientSize = new System.Drawing.Size(480, 272);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRecuperarSenha);
             this.Controls.Add(this.txtEmail);

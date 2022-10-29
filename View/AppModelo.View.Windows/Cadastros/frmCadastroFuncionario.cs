@@ -69,5 +69,12 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
+
+        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        {
+            var controller = new FuncionarioController();
+            var cadastrarFuncionario = controller.Cadastrar();
+
+        }
     }
 }
