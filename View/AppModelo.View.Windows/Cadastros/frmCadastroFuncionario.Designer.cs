@@ -316,6 +316,7 @@
             // rbFeminino
             // 
             this.rbFeminino.AutoSize = true;
+            this.rbFeminino.Checked = true;
             this.rbFeminino.Location = new System.Drawing.Point(503, 127);
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(87, 24);
@@ -331,7 +332,6 @@
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(94, 24);
             this.rbMasculino.TabIndex = 29;
-            this.rbMasculino.TabStop = true;
             this.rbMasculino.Text = "Masculino";
             this.rbMasculino.UseVisualStyleBackColor = true;
             // 

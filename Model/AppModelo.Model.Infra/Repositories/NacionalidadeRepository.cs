@@ -9,7 +9,7 @@ namespace AppModelo.Model.Infra.Repositories
     public class NacionalidadeRepository
     {
         // insert (create) - select (read) - update (update) - delete (delete)
-        public bool Inserir(string descricao) 
+        public bool Inserir(string descricao)
         {
             //string interpolation $
             var sql = $"INSERT INTO nacionalidades (descricao) VALUES ('{descricao}')";

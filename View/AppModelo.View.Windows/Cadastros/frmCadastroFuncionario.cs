@@ -73,8 +73,7 @@ namespace AppModelo.View.Windows.Cadastros
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             var controller = new FuncionarioController();
-            var cadastrarFuncionario = controller.Cadastrar();
-
+            var cadastrarFuncionario = controller.Cadastrar(txtNome.Text, txtDataNascimento.Text, rbFeminino.Checked, txtCpf.Text, cmbNacionalidade.Text, cmbNaturalidade.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, txtEnderecoNumero.Text, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
         }
     }
 }
