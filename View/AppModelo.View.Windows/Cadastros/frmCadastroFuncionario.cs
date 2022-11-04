@@ -13,7 +13,6 @@ namespace AppModelo.View.Windows.Cadastros
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
 
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
-
         public frmCadastroFuncionario()
         {
             InitializeComponent();
@@ -73,7 +72,21 @@ namespace AppModelo.View.Windows.Cadastros
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             var controller = new FuncionarioController();
-            var cadastrarFuncionario = controller.Cadastrar(txtNome.Text, txtDataNascimento.Text, rbFeminino.Checked, txtCpf.Text, cmbNacionalidade.Text, cmbNaturalidade.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, txtEnderecoNumero.Text, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+            //var nome = txtNome.Text;
+            //var dataNascimento = txtDataNascimento.Text.ToString();
+            //var genero = rbFeminino.Checked;
+            //var cpf = txtCpf;
+            //var email = txtEmail.Text;
+            //var telefone = txtTelefone.Text;
+            //var telefoneContato = txtTelefoneContato.Text;
+            //var cep = txtEnderecoCep.Text;
+            //var logradouro = txtEnderecoLogradouro.Text;
+            //var numero =txtEnderecoNumero.Text;
+            //var complmeento = txtEnderecoComplemento.Text;
+            //var bairro = txtEnderecoBairro.Text;
+            //var municipio = txtEnderecoMunicipio.Text;
+            //var uf = txtEnderecoUf.Text;
+            var cadastrarFuncionario = controller.Cadastrar(txtNome.Text, txtDataNascimento.Text, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, txtEnderecoNumero.Text, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
         }
     }
 }

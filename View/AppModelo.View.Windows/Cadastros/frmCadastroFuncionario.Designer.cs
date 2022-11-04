@@ -92,7 +92,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(21, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 30);
+            this.label1.Size = new System.Drawing.Size(354, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "CADASTRO DE FUNCIONÁRIOS";
             // 
@@ -101,7 +101,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 20);
+            this.label2.Size = new System.Drawing.Size(25, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Id";
             // 
@@ -109,14 +109,14 @@
             // 
             this.txtId.Location = new System.Drawing.Point(14, 130);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(62, 27);
+            this.txtId.Size = new System.Drawing.Size(62, 30);
             this.txtId.TabIndex = 2;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(113, 130);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(207, 27);
+            this.txtNome.Size = new System.Drawing.Size(207, 30);
             this.txtNome.TabIndex = 4;
             this.txtNome.Tag = "Obrigatorio";
             this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
@@ -126,7 +126,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(109, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.Size = new System.Drawing.Size(137, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nome Completo";
             // 
@@ -135,7 +135,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(613, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 20);
+            this.label4.Size = new System.Drawing.Size(39, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "CPF";
             // 
@@ -144,7 +144,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(335, 107);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 20);
+            this.label5.Size = new System.Drawing.Size(142, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "Data Nascimento";
             // 
@@ -153,7 +153,7 @@
             this.txtCpf.Location = new System.Drawing.Point(617, 130);
             this.txtCpf.Mask = "###,###,###-##";
             this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(129, 27);
+            this.txtCpf.Size = new System.Drawing.Size(129, 30);
             this.txtCpf.TabIndex = 8;
             this.txtCpf.Tag = "Obrigatorio";
             this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
@@ -163,7 +163,7 @@
             this.txtDataNascimento.Location = new System.Drawing.Point(339, 130);
             this.txtDataNascimento.Mask = "00/00/0000";
             this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(123, 27);
+            this.txtDataNascimento.Size = new System.Drawing.Size(123, 30);
             this.txtDataNascimento.TabIndex = 9;
             this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
@@ -172,7 +172,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(14, 259);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(207, 27);
+            this.txtEmail.Size = new System.Drawing.Size(207, 30);
             this.txtEmail.TabIndex = 11;
             this.txtEmail.Tag = "Obrigatorio";
             // 
@@ -181,7 +181,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(10, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
+            this.label6.Size = new System.Drawing.Size(58, 23);
             this.label6.TabIndex = 10;
             this.label6.Text = "E-mail";
             // 
@@ -190,7 +190,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(253, 259);
             this.txtTelefone.Mask = "(##) #####-####";
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(129, 27);
+            this.txtTelefone.Size = new System.Drawing.Size(129, 30);
             this.txtTelefone.TabIndex = 13;
             this.txtTelefone.Tag = "Obrigatorio";
             // 
@@ -199,7 +199,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(249, 236);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.Size = new System.Drawing.Size(73, 23);
             this.label7.TabIndex = 12;
             this.label7.Text = "Telefone";
             // 
@@ -208,7 +208,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(10, 299);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 20);
+            this.label8.Size = new System.Drawing.Size(40, 23);
             this.label8.TabIndex = 14;
             this.label8.Text = "Cep";
             // 
@@ -217,7 +217,7 @@
             this.txtEnderecoLogradouro.Enabled = false;
             this.txtEnderecoLogradouro.Location = new System.Drawing.Point(14, 388);
             this.txtEnderecoLogradouro.Name = "txtEnderecoLogradouro";
-            this.txtEnderecoLogradouro.Size = new System.Drawing.Size(300, 27);
+            this.txtEnderecoLogradouro.Size = new System.Drawing.Size(300, 30);
             this.txtEnderecoLogradouro.TabIndex = 17;
             // 
             // label9
@@ -225,7 +225,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(10, 365);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 20);
+            this.label9.Size = new System.Drawing.Size(99, 23);
             this.label9.TabIndex = 16;
             this.label9.Text = "Logradouro";
             // 
@@ -233,7 +233,7 @@
             // 
             this.txtEnderecoNumero.Location = new System.Drawing.Point(353, 388);
             this.txtEnderecoNumero.Name = "txtEnderecoNumero";
-            this.txtEnderecoNumero.Size = new System.Drawing.Size(93, 27);
+            this.txtEnderecoNumero.Size = new System.Drawing.Size(93, 30);
             this.txtEnderecoNumero.TabIndex = 19;
             this.txtEnderecoNumero.Tag = "Obrigatorio";
             // 
@@ -242,7 +242,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(349, 365);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 20);
+            this.label10.Size = new System.Drawing.Size(73, 23);
             this.label10.TabIndex = 18;
             this.label10.Text = "Numero";
             // 
@@ -251,7 +251,7 @@
             this.txtEnderecoBairro.Enabled = false;
             this.txtEnderecoBairro.Location = new System.Drawing.Point(14, 454);
             this.txtEnderecoBairro.Name = "txtEnderecoBairro";
-            this.txtEnderecoBairro.Size = new System.Drawing.Size(230, 27);
+            this.txtEnderecoBairro.Size = new System.Drawing.Size(230, 30);
             this.txtEnderecoBairro.TabIndex = 21;
             // 
             // label11
@@ -259,7 +259,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(10, 428);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 20);
+            this.label11.Size = new System.Drawing.Size(55, 23);
             this.label11.TabIndex = 20;
             this.label11.Text = "Bairro";
             // 
@@ -268,7 +268,7 @@
             this.txtEnderecoMunicipio.Enabled = false;
             this.txtEnderecoMunicipio.Location = new System.Drawing.Point(275, 454);
             this.txtEnderecoMunicipio.Name = "txtEnderecoMunicipio";
-            this.txtEnderecoMunicipio.Size = new System.Drawing.Size(171, 27);
+            this.txtEnderecoMunicipio.Size = new System.Drawing.Size(171, 30);
             this.txtEnderecoMunicipio.TabIndex = 23;
             // 
             // label12
@@ -276,7 +276,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(271, 428);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 20);
+            this.label12.Size = new System.Drawing.Size(85, 23);
             this.label12.TabIndex = 22;
             this.label12.Text = "Município";
             // 
@@ -285,7 +285,7 @@
             this.txtEnderecoUf.Enabled = false;
             this.txtEnderecoUf.Location = new System.Drawing.Point(469, 454);
             this.txtEnderecoUf.Name = "txtEnderecoUf";
-            this.txtEnderecoUf.Size = new System.Drawing.Size(93, 27);
+            this.txtEnderecoUf.Size = new System.Drawing.Size(93, 30);
             this.txtEnderecoUf.TabIndex = 25;
             // 
             // label13
@@ -293,7 +293,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(465, 431);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(26, 20);
+            this.label13.Size = new System.Drawing.Size(30, 23);
             this.label13.TabIndex = 24;
             this.label13.Text = "UF";
             // 
@@ -301,7 +301,7 @@
             // 
             this.txtEnderecoComplemento.Location = new System.Drawing.Point(469, 388);
             this.txtEnderecoComplemento.Name = "txtEnderecoComplemento";
-            this.txtEnderecoComplemento.Size = new System.Drawing.Size(277, 27);
+            this.txtEnderecoComplemento.Size = new System.Drawing.Size(277, 30);
             this.txtEnderecoComplemento.TabIndex = 27;
             // 
             // label14
@@ -309,7 +309,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(465, 365);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(176, 20);
+            this.label14.Size = new System.Drawing.Size(199, 23);
             this.label14.TabIndex = 26;
             this.label14.Text = "Complemento (opcional)";
             // 
@@ -319,7 +319,7 @@
             this.rbFeminino.Checked = true;
             this.rbFeminino.Location = new System.Drawing.Point(503, 127);
             this.rbFeminino.Name = "rbFeminino";
-            this.rbFeminino.Size = new System.Drawing.Size(87, 24);
+            this.rbFeminino.Size = new System.Drawing.Size(97, 27);
             this.rbFeminino.TabIndex = 28;
             this.rbFeminino.TabStop = true;
             this.rbFeminino.Text = "Feminino";
@@ -330,7 +330,7 @@
             this.rbMasculino.AutoSize = true;
             this.rbMasculino.Location = new System.Drawing.Point(503, 146);
             this.rbMasculino.Name = "rbMasculino";
-            this.rbMasculino.Size = new System.Drawing.Size(94, 24);
+            this.rbMasculino.Size = new System.Drawing.Size(105, 27);
             this.rbMasculino.TabIndex = 29;
             this.rbMasculino.Text = "Masculino";
             this.rbMasculino.UseVisualStyleBackColor = true;
@@ -340,7 +340,7 @@
             this.cmbNacionalidade.FormattingEnabled = true;
             this.cmbNacionalidade.Location = new System.Drawing.Point(14, 193);
             this.cmbNacionalidade.Name = "cmbNacionalidade";
-            this.cmbNacionalidade.Size = new System.Drawing.Size(140, 28);
+            this.cmbNacionalidade.Size = new System.Drawing.Size(140, 31);
             this.cmbNacionalidade.TabIndex = 30;
             this.cmbNacionalidade.Tag = "Obrigatorio";
             // 
@@ -349,7 +349,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(10, 170);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 20);
+            this.label15.Size = new System.Drawing.Size(119, 23);
             this.label15.TabIndex = 31;
             this.label15.Text = "Nacionalidade";
             // 
@@ -358,7 +358,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(176, 170);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 20);
+            this.label16.Size = new System.Drawing.Size(109, 23);
             this.label16.TabIndex = 33;
             this.label16.Text = "Naturalidade";
             // 
@@ -367,7 +367,7 @@
             this.cmbNaturalidade.FormattingEnabled = true;
             this.cmbNaturalidade.Location = new System.Drawing.Point(180, 193);
             this.cmbNaturalidade.Name = "cmbNaturalidade";
-            this.cmbNaturalidade.Size = new System.Drawing.Size(140, 28);
+            this.cmbNaturalidade.Size = new System.Drawing.Size(140, 31);
             this.cmbNaturalidade.TabIndex = 32;
             // 
             // txtEnderecoCep
@@ -375,7 +375,7 @@
             this.txtEnderecoCep.Location = new System.Drawing.Point(14, 322);
             this.txtEnderecoCep.Mask = "#####-###";
             this.txtEnderecoCep.Name = "txtEnderecoCep";
-            this.txtEnderecoCep.Size = new System.Drawing.Size(100, 27);
+            this.txtEnderecoCep.Size = new System.Drawing.Size(100, 30);
             this.txtEnderecoCep.TabIndex = 34;
             this.txtEnderecoCep.Tag = "Obrigatorio";
             // 
@@ -394,7 +394,7 @@
             this.txtTelefoneContato.Location = new System.Drawing.Point(417, 259);
             this.txtTelefoneContato.Mask = "(##) #####-####";
             this.txtTelefoneContato.Name = "txtTelefoneContato";
-            this.txtTelefoneContato.Size = new System.Drawing.Size(129, 27);
+            this.txtTelefoneContato.Size = new System.Drawing.Size(129, 30);
             this.txtTelefoneContato.TabIndex = 37;
             // 
             // label17
@@ -402,7 +402,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(413, 236);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(120, 20);
+            this.label17.Size = new System.Drawing.Size(137, 23);
             this.label17.TabIndex = 36;
             this.label17.Text = "Telefone contato";
             // 
@@ -411,7 +411,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(499, 107);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 20);
+            this.label18.Size = new System.Drawing.Size(46, 23);
             this.label18.TabIndex = 38;
             this.label18.Text = "Sexo";
             // 
@@ -421,7 +421,6 @@
             // 
             // btnCadastrarFuncionario
             // 
-            this.btnCadastrarFuncionario.Enabled = false;
             this.btnCadastrarFuncionario.Location = new System.Drawing.Point(153, 509);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(467, 32);
@@ -432,7 +431,7 @@
             // 
             // frmCadastroFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 559);
             this.Controls.Add(this.btnCadastrarFuncionario);
