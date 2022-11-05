@@ -5,9 +5,11 @@ namespace AppModelo.Model.Domain.Entities
     public class FuncionarioEntity
     {
         public int Id { get; set; }
+        public int Id_nacionalidades { get; set; }
+        public int Id_naturalidades { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public bool Genero { get; set; }
+        public bool? Genero { get; set; }
         public DateTime DataNascimento{ get; set; }
         public string CPF { get; set; }
         public string Telefone { get; set; }

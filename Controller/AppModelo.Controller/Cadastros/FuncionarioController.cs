@@ -6,11 +6,11 @@ namespace AppModelo.Controller.Cadastros
 {
     public class FuncionarioController
     {
-        public bool Cadastrar(string nome, string datanascimento, bool genero, string cpf, string email, string telefone, string telefoneContato, string cep, string logradouro, string numero, string complemento, string bairro, string municipio, string uf)
+        public bool Cadastrar(int nacionalidade, int naturalidade, string nome, DateTime datanascimento, bool genero, string cpf, string email, string telefone, string telefoneContato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
         {
             var repositorio = new FuncionarioRepository();
 
-            var resposta = repositorio.Iserir(nome, datanascimento, genero, cpf, email, telefone, telefoneContato, cep, logradouro, numero, complemento, bairro, municipio, uf);
+            var resposta = repositorio.Iserir(nacionalidade, naturalidade, nome, datanascimento, genero, cpf, email, telefone, telefoneContato, cep, logradouro, numero, complemento, bairro, municipio, uf);
 
             return resposta;
         }

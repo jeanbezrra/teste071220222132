@@ -13,6 +13,8 @@ namespace AppModelo.View.Windows.Cadastros
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
 
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
+
+        private FuncionarioController _funcionarioController = new FuncionarioController();
         public frmCadastroFuncionario()
         {
             InitializeComponent();
@@ -70,23 +72,30 @@ namespace AppModelo.View.Windows.Cadastros
         }
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        { 
+            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+            int numero = int.Parse(txtEnderecoNumero.Text);
+            
+            var salvou = _funcionarioController.Cadastrar(1, 1, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+            
+            if (salvou)
+            {
+                MessageBox.Show("Cadastrado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar usuário");
+            }
+        }
+
+        private void cmbNacionalidade_SelectedValueChanged(object sender, EventArgs e)
         {
-            var controller = new FuncionarioController();
-            //var nome = txtNome.Text;
-            //var dataNascimento = txtDataNascimento.Text.ToString();
-            //var genero = rbFeminino.Checked;
-            //var cpf = txtCpf;
-            //var email = txtEmail.Text;
-            //var telefone = txtTelefone.Text;
-            //var telefoneContato = txtTelefoneContato.Text;
-            //var cep = txtEnderecoCep.Text;
-            //var logradouro = txtEnderecoLogradouro.Text;
-            //var numero =txtEnderecoNumero.Text;
-            //var complmeento = txtEnderecoComplemento.Text;
-            //var bairro = txtEnderecoBairro.Text;
-            //var municipio = txtEnderecoMunicipio.Text;
-            //var uf = txtEnderecoUf.Text;
-            var cadastrarFuncionario = controller.Cadastrar(txtNome.Text, txtDataNascimento.Text, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, txtEnderecoNumero.Text, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+
+        }
+
+        private void cmbNaturalidade_SelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
