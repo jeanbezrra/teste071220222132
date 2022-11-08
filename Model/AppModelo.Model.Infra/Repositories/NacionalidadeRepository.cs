@@ -19,10 +19,6 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
-        public bool Atualizar() 
-        {
-            return false;
-        }
         public bool Remover() 
         {
             return false;

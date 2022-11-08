@@ -13,6 +13,6 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.Iserir(nacionalidade, naturalidade, nome, datanascimento, genero, cpf, email, telefone, telefoneContato, cep, logradouro, numero, complemento, bairro, municipio, uf);
 
             return resposta;
-        }
+        }        
     }
 }
