@@ -77,10 +77,10 @@ namespace AppModelo.View.Windows.Cadastros
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
 
-            var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
             var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
+            var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
 
-            var salvou = _funcionarioController.Cadastrar(1, 1, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+            var salvou = _funcionarioController.Cadastrar(obterIndexNaturalidade, obterIndexNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
 
             if (salvou)
             {

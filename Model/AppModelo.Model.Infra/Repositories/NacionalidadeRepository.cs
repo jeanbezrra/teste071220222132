@@ -19,9 +19,24 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
-        public bool Remover() 
+        public bool Remover(string descricao) 
         {
-            return false;
+            var sql = $"DELETE FROM nacionalidades WHERE descricao = '{descricao}'";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+
+            return resultado > 0;
+        }
+        public bool Atualizar(string descricao, string id)
+        {
+            var sql = $"UPDATE nacionalidades SET descricao = '{descricao}' WHERE id = '{id}'";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+
+            return resultado > 0;
+
         }
         public IEnumerable<NacionalidadeEntity> ObterTodos()
         {
