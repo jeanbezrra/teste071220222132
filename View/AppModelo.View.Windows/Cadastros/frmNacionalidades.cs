@@ -1,5 +1,6 @@
 ﻿using AppModelo.Controller.Cadastros;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
@@ -49,17 +50,18 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnAtualizarNacionalidade_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(txtId.Text))
+            {
+                errorProvider1.SetError(txtId, "Digite o ID correto para atualizar");
+                return;
+            }
             if (String.IsNullOrWhiteSpace(txtDescricao.Text))
             {
                 errorProvider1.SetError(txtDescricao, "Digite a nacionalidade para atualizá-la");
                 return;
             }
             else
-            {
-                //if (String.IsNullOrWhiteSpace(txtId.Text))
-
-                //int id = int.Parse(txtId.Text);
-
+            {               
                 var atualizou = _nacionalidadeController.Atualizar(txtDescricao.Text, txtId.Text);
                 if (atualizou)
                 {
@@ -70,8 +72,9 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Houve um erro ao atualizar no banco de dados");
                 }
-
-            }
+                errorProvider1.Clear();                
+            }           
+            errorProvider1.Clear();
             this.Close();
         }
 

@@ -80,6 +80,7 @@
             this.gvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNacionalidades.Location = new System.Drawing.Point(15, 132);
             this.gvNacionalidades.Name = "gvNacionalidades";
+            this.gvNacionalidades.RowHeadersWidth = 45;
             this.gvNacionalidades.Size = new System.Drawing.Size(381, 122);
             this.gvNacionalidades.TabIndex = 4;
             // 
