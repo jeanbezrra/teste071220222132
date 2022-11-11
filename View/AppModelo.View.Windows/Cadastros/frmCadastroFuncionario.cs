@@ -22,9 +22,11 @@ namespace AppModelo.View.Windows.Cadastros
             Componentes.FormatarCamposObrigatorios(this);
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+            cmbNacionalidade.ValueMember = "Id";
 
             cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
             cmbNaturalidade.DisplayMember = "Descricao";
+            cmbNaturalidade.ValueMember = "Id";
         }
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
@@ -77,10 +79,10 @@ namespace AppModelo.View.Windows.Cadastros
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
 
-            var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
+            var obterIndexNaturalidade = cmbNaturalidade.SelectedValue;
             var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
 
-            var salvou = _funcionarioController.Cadastrar(obterIndexNaturalidade, obterIndexNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+            var salvou = _funcionarioController.Cadastrar((int)obterIndexNaturalidade, obterIndexNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
 
             if (salvou)
             {
@@ -93,16 +95,15 @@ namespace AppModelo.View.Windows.Cadastros
             limparDados(this);
         }
 
+        private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var obterIndexNaturalidade = cmbNaturalidade.SelectedValue;
+            string Index = cmbNaturalidade.Text;
+        }
         private void cmbNacionalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterNacionalidade = cmbNacionalidade.SelectedIndex;
             string Index = cmbNacionalidade.Text;
-        }
-
-        private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
-            string Index = cmbNaturalidade.Text;
         }
         public static void limparDados(Control ctrl)
         {

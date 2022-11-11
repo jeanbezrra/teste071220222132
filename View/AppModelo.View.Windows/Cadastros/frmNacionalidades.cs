@@ -33,19 +33,19 @@ namespace AppModelo.View.Windows.Cadastros
                     }
                 }
                 errorProvider1.Clear();
-
                 var salvou = _nacionalidadeController.Cadastrar(txtDescricao.Text);
                 if (salvou)
                 {
                     MessageBox.Show("Nacionalidade incluída com sucesso");
                     txtDescricao.Text = string.Empty;
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Houve um erro ao salvar no banco de dados");
                 }
-            }
-            this.Close();
+                errorProvider1.Clear();
+            }            
         }
 
         private void btnAtualizarNacionalidade_Click(object sender, EventArgs e)
@@ -55,27 +55,27 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider1.SetError(txtId, "Digite o ID correto para atualizar");
                 return;
             }
+            errorProvider1.Clear();
             if (String.IsNullOrWhiteSpace(txtDescricao.Text))
             {
                 errorProvider1.SetError(txtDescricao, "Digite a nacionalidade para atualizá-la");
                 return;
             }
             else
-            {               
+            {
                 var atualizou = _nacionalidadeController.Atualizar(txtDescricao.Text, txtId.Text);
                 if (atualizou)
                 {
                     MessageBox.Show("Nacionalidade atualizada com sucesso");
                     txtDescricao.Text = string.Empty;
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Houve um erro ao atualizar no banco de dados");
+                    MessageBox.Show("Houve um erro ao atualizar no banco de dados");                   
                 }
-                errorProvider1.Clear();                
-            }           
+            }
             errorProvider1.Clear();
-            this.Close();
         }
 
         private void btnRemoverNacionalidade_Click(object sender, EventArgs e)
@@ -92,13 +92,14 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Nacionalidade removida com sucesso");
                     txtDescricao.Text = string.Empty;
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Houve um erro ao remover no banco de dados");
                 }
             }
-            this.Close();
+            errorProvider1.Clear();
         }
     }
 }
