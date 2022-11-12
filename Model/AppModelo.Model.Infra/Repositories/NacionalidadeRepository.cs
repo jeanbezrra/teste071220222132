@@ -19,9 +19,9 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
-        public bool Remover(string descricao) 
+        public bool Remover(string id) 
         {
-            var sql = $"DELETE FROM nacionalidades WHERE descricao = '{descricao}'";
+            var sql = $"DELETE FROM nacionalidades WHERE id = '{id}'";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);

@@ -12,8 +12,7 @@ namespace AppModelo.View.Windows.Cadastros
         {
             InitializeComponent();
 
-            var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
-            gvNacionalidades.DataSource = listaDeNacionalidades;
+            AtualizarDataGrid();
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -38,7 +37,8 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Nacionalidade incluída com sucesso");
                     txtDescricao.Text = string.Empty;
-                    this.Close();
+                    limparDados(this);
+                    AtualizarDataGrid();
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace AppModelo.View.Windows.Cadastros
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
             {
-                errorProvider1.SetError(txtId, "Digite o ID correto para atualizar");
+                errorProvider1.SetError(txtId, "Digite o ID para atualizar");
                 return;
             }
             errorProvider1.Clear();
@@ -68,7 +68,7 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Nacionalidade atualizada com sucesso");
                     txtDescricao.Text = string.Empty;
-                    this.Close();
+                    AtualizarDataGrid();
                 }
                 else
                 {
@@ -80,19 +80,19 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnRemoverNacionalidade_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtDescricao.Text))
+            if (String.IsNullOrWhiteSpace(txtId.Text))
             {
-                errorProvider1.SetError(txtDescricao, "Digite a nacionalidade para removê-la");
+                errorProvider1.SetError(txtId, "Digite o ID para remover a nacionalidade");
                 return;
             }
             else
             {
-                var removeu = _nacionalidadeController.Remover(txtDescricao.Text);
+                var removeu = _nacionalidadeController.Remover(txtId.Text);
                 if (removeu)
                 {
                     MessageBox.Show("Nacionalidade removida com sucesso");
-                    txtDescricao.Text = string.Empty;
-                    this.Close();
+                    txtId.Text = string.Empty;
+                    AtualizarDataGrid();
                 }
                 else
                 {
@@ -100,6 +100,21 @@ namespace AppModelo.View.Windows.Cadastros
                 }
             }
             errorProvider1.Clear();
+        }
+        private void AtualizarDataGrid()
+        {
+            var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
+            gvNacionalidades.DataSource = listaDeNacionalidades;
+        }
+        public static void limparDados(Control ctrl)
+        {
+            foreach (Control c in ctrl.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = "";
+                }
+            }
         }
     }
 }

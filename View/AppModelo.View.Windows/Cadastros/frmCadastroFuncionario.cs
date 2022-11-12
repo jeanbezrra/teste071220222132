@@ -1,25 +1,26 @@
 ﻿using AppModelo.Controller.Cadastros;
 using AppModelo.Controller.External;
 using AppModelo.Model.Domain.Validators;
-using AppModelo.Model.Infra.Repositories;
 using AppModelo.View.Windows.Helpers;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+//using ComboBox = System.Windows.Forms.ComboBox;
+//using TextBox = System.Windows.Forms.TextBox;
+//using TrackBar = System.Windows.Forms.TrackBar;
 
 namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmCadastroFuncionario : Form
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
-
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
-
         private FuncionarioController _funcionarioController = new FuncionarioController();
-        public frmCadastroFuncionario()
-        {
+        public frmCadastroFuncionario()  
+        {            
             InitializeComponent();
             Componentes.FormatarCamposObrigatorios(this);
+
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
             cmbNacionalidade.ValueMember = "Id";
@@ -73,17 +74,15 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
-
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
-
-            var obterIndexNaturalidade = cmbNaturalidade.SelectedValue;
-            var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
-
-            var salvou = _funcionarioController.Cadastrar((int)obterIndexNaturalidade, obterIndexNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
-
+            
+            int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
+            int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
+                   
+            var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
             if (salvou)
             {
                 MessageBox.Show("Cadastrado com sucesso");
@@ -94,7 +93,6 @@ namespace AppModelo.View.Windows.Cadastros
             }
             limparDados(this);
         }
-
         private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNaturalidade = cmbNaturalidade.SelectedValue;
@@ -102,7 +100,7 @@ namespace AppModelo.View.Windows.Cadastros
         }
         private void cmbNacionalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var obterNacionalidade = cmbNacionalidade.SelectedIndex;
+            var obterNacionalidade = cmbNacionalidade.SelectedValue;
             string Index = cmbNacionalidade.Text;
         }
         public static void limparDados(Control ctrl)
