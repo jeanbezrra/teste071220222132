@@ -5,19 +5,33 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class frmRecuperarSenha : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public frmRecuperarSenha()
         {
             InitializeComponent();
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
             var emailEhValido = Validadores.EmailEValido(txtEmail.Text);

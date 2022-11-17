@@ -7,14 +7,20 @@ namespace AppModelo.View.Windows
 {
     public partial class frmLogin : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public frmLogin()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            //1 passo validar o e-mail
             var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
             if (emailEhValido is false)
             {
@@ -36,7 +42,11 @@ namespace AppModelo.View.Windows
                 MessageBox.Show("Usuário ou senha não encontrado");
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void label3_Click(object sender, EventArgs e)
         {
             var form = new frmRecuperarSenha();
