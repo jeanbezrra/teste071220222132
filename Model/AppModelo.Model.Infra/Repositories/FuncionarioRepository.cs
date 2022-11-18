@@ -18,5 +18,6 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
+
     }
 }

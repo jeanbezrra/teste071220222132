@@ -16,6 +16,18 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.Inserir(descricao, status);
             return resposta;
         }
+        public bool Atualizar(string descricao, string id)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Atualizar(descricao, id);
+            return resposta;
+        }
+        public bool Remover(string id)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Remover(id);
+            return resposta;
+        }
         public List<NaturalidadeEntity> ObterTodasNaturalidades()
         {
             var repositorio = new NaturalidadeRepository();

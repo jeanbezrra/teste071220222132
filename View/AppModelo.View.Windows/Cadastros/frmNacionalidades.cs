@@ -1,6 +1,5 @@
 ﻿using AppModelo.Controller.Cadastros;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros

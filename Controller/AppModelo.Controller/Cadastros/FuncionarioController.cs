@@ -1,6 +1,7 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using AppModelo.Model.Infra.Repositories;
 using System;
+using System.Collections.Generic;
 
 namespace AppModelo.Controller.Cadastros
 {
@@ -13,6 +14,18 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.Iserir(naturalidade, nacionalidade, nome, datanascimento, genero, cpf, email, telefone, telefoneContato, cep, logradouro, numero, complemento, bairro, municipio, uf);
 
             return resposta;
-        }        
+        }
+        public List<FuncionarioEntity> ObterTodosFuncionarios()
+        {
+            var repositorio = new FuncionarioRepository();
+            var resposta = repositorio.ObterTodos();
+            return (List<FuncionarioEntity>)resposta;
+        }
+        //    public List<NacionalidadeEntity> ObterTodasNacionalidades()
+        //{
+        //    var repositorio = new NacionalidadeRepository();
+        //    var resposta = repositorio.ObterTodos();
+        //    return (List<NacionalidadeEntity>)resposta;
+        }
     }
 }

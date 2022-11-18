@@ -5,17 +5,20 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows
 {
+    /// <summary>
+    /// Formulário que inicia o programa.
+    /// </summary>
     public partial class frmLogin : Form
-    {
-        /// <summary>
-        /// 
-        /// </summary>
+    {       
         public frmLogin()
         {
             InitializeComponent();
         }
         /// <summary>
-        /// 
+        /// Evento de clique para logar no programa, onde é validado no banco de dados seu email e senha,
+        /// caso seja válido o frmPrincipal é exibido. Através da classe "Validadores" o email passa pela validadção se 
+        /// estiver incorreto é gerado um ErrorProvider, o mesmo acontece caso o usuario não esteja cadastrado, 
+        /// más agora gerando uma MessageBox.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -43,7 +46,7 @@ namespace AppModelo.View.Windows
             }
         }
         /// <summary>
-        /// 
+        /// Evento de clique para recuperação de senha, após o clique o formulário é inicializado.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

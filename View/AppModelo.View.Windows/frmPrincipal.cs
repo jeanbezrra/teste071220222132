@@ -1,30 +1,20 @@
 ﻿using AppModelo.View.Windows.Cadastros;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows
 {
     /// <summary>
-    /// 
+    /// Formulário Principal do sistema com todos formulários de cadastros.
     /// </summary>
     public partial class frmPrincipal : Form
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public frmPrincipal()
         {
             InitializeComponent();
         }
         /// <summary>
-        /// 
+        /// Evento de Click, após o botão ser clicado o formulário "frmCadastroFuncionario" é exibido. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -34,7 +24,7 @@ namespace AppModelo.View.Windows
             form.Show();
         }
         /// <summary>
-        /// 
+        /// Evento de Click, após o botão ser clicado o formulário "frmNaturalidade" é exibido.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -44,7 +34,7 @@ namespace AppModelo.View.Windows
             form.Show();
         }
         /// <summary>
-        /// 
+        /// Evento de Click, após o botão ser clicado o formulário "frmNacionalidades" é exibido.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -52,6 +42,11 @@ namespace AppModelo.View.Windows
         {
             var form = new frmNacionalidades();
             form.Show();
+        }
+
+        private void cadastradosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -4,14 +4,20 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Helpers
 {
+    /// <summary>
+    /// Classe para formatação de campos obrigatórios.
+    /// </summary>
     internal static partial class Componentes
     {
+        /// <summary>
+        /// Método que valida campos TextBox, ComboBox e MaskedTextBox de acordo com a tag "Obrigatório" definida nas propriedades 
+        /// de cada um. Em qualquer formulário que use essa classe e tenha definida sua tag como "Obrigatório" nos campos de 
+        /// citados anteriormente é feita a formatação e adicionado a propriedade "BackColor" com a cor "LightGoldenrodYellow".
+        /// </summary>
+        /// <param name="frm"></param>
         internal static void FormatarCamposObrigatorios(Form frm)
         {
             Action<Control.ControlCollection> func = null;
-            //func é uma função anônima que recebe todos os controles do formularios
-            //e de acordo com o switch aplica as formatações.
-
             func = (controls) =>
             {
                 foreach (Control control in controls)

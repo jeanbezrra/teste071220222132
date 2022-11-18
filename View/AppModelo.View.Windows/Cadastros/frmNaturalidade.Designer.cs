@@ -37,9 +37,11 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.gvNaturalidades = new System.Windows.Forms.DataGridView();
             this.chkStatus = new System.Windows.Forms.CheckBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnAtualizarNaturalidade = new System.Windows.Forms.Button();
+            this.btnRemoverNaturalidade = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,7 +51,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 30);
+            this.panel1.Size = new System.Drawing.Size(478, 30);
             this.panel1.TabIndex = 7;
             // 
             // label1
@@ -81,12 +83,12 @@
             // 
             this.txtDescricao.Location = new System.Drawing.Point(15, 94);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(197, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(281, 20);
             this.txtDescricao.TabIndex = 11;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(321, 92);
+            this.btnSalvar.Location = new System.Drawing.Point(388, 92);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 12;
@@ -99,7 +101,7 @@
             this.gvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNaturalidades.Location = new System.Drawing.Point(15, 132);
             this.gvNaturalidades.Name = "gvNaturalidades";
-            this.gvNaturalidades.Size = new System.Drawing.Size(381, 122);
+            this.gvNaturalidades.Size = new System.Drawing.Size(448, 160);
             this.gvNaturalidades.TabIndex = 13;
             // 
             // chkStatus
@@ -107,22 +109,48 @@
             this.chkStatus.AutoSize = true;
             this.chkStatus.Checked = true;
             this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkStatus.Location = new System.Drawing.Point(218, 98);
+            this.chkStatus.Location = new System.Drawing.Point(320, 98);
             this.chkStatus.Name = "chkStatus";
             this.chkStatus.Size = new System.Drawing.Size(50, 17);
             this.chkStatus.TabIndex = 14;
             this.chkStatus.Text = "Ativo";
             this.chkStatus.UseVisualStyleBackColor = true;
             // 
-            // errorProvider1
+            // errorProvider2
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // btnAtualizarNaturalidade
+            // 
+            this.btnAtualizarNaturalidade.BackColor = System.Drawing.Color.Orange;
+            this.btnAtualizarNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(285, 308);
+            this.btnAtualizarNaturalidade.Name = "btnAtualizarNaturalidade";
+            this.btnAtualizarNaturalidade.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizarNaturalidade.TabIndex = 16;
+            this.btnAtualizarNaturalidade.Text = "Atualizar";
+            this.btnAtualizarNaturalidade.UseVisualStyleBackColor = false;
+            this.btnAtualizarNaturalidade.Click += new System.EventHandler(this.btnAtualizarNaturalidade_Click);
+            // 
+            // btnRemoverNaturalidade
+            // 
+            this.btnRemoverNaturalidade.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoverNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverNaturalidade.Location = new System.Drawing.Point(388, 308);
+            this.btnRemoverNaturalidade.Name = "btnRemoverNaturalidade";
+            this.btnRemoverNaturalidade.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverNaturalidade.TabIndex = 15;
+            this.btnRemoverNaturalidade.Text = "Remover";
+            this.btnRemoverNaturalidade.UseVisualStyleBackColor = false;
+            this.btnRemoverNaturalidade.Click += new System.EventHandler(this.btnRemoverNaturalidade_Click);
             // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 289);
+            this.ClientSize = new System.Drawing.Size(478, 343);
+            this.Controls.Add(this.btnAtualizarNaturalidade);
+            this.Controls.Add(this.btnRemoverNaturalidade);
             this.Controls.Add(this.chkStatus);
             this.Controls.Add(this.gvNaturalidades);
             this.Controls.Add(this.btnSalvar);
@@ -132,9 +160,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "frmNaturalidade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmNaturalidade";
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +179,8 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView gvNaturalidades;
         private System.Windows.Forms.CheckBox chkStatus;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Button btnAtualizarNaturalidade;
+        private System.Windows.Forms.Button btnRemoverNaturalidade;
     }
 }
