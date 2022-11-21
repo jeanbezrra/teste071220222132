@@ -1,13 +1,15 @@
-﻿using Dapper;
+﻿using AppModelo.Model.Domain.Entities;
+using Dapper;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace AppModelo.Model.Infra.Repositories
 {
     public class FuncionarioRepository
     {
-        public bool Iserir(int naturalidade, int nacionalidade, string nome, DateTime dataNascimento, bool genero, string cpf, string email, string telefone,string telefoneContato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
+        public bool Iserir(int naturalidade, int nacionalidade, string nome, DateTime dataNascimento, bool genero, string cpf, string email, string telefone, string telefoneContato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
         {
             var dataConvertida = dataNascimento.ToString("yyyy-MM-dd");
             //string interpolation $
@@ -18,6 +20,15 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
+        public IEnumerable<FuncionarioEntity> ObterTodosFuncionarios()
+        {
+            var sql = "SELECT * FROM funcionarios";
 
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            //todo comando select usa-se .Query<>
+            var resultado = conexaoBd.Query<FuncionarioEntity>(sql);
+
+            return resultado;
+        }
     }
 }

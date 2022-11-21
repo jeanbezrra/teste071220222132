@@ -18,9 +18,19 @@ namespace AppModelo.View.Windows
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmCadastroFuncionario();
+            form.Show();
+        }
+        /// <summary>
+        /// Evento de Click, após o botão ser clicado o formulário "frmFuncionariosCadastrados" é exibido.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void exibirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmFuncionariosCadastrados();
             form.Show();
         }
         /// <summary>
@@ -42,11 +52,6 @@ namespace AppModelo.View.Windows
         {
             var form = new frmNacionalidades();
             form.Show();
-        }
-
-        private void cadastradosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

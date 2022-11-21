@@ -18,14 +18,8 @@ namespace AppModelo.Controller.Cadastros
         public List<FuncionarioEntity> ObterTodosFuncionarios()
         {
             var repositorio = new FuncionarioRepository();
-            var resposta = repositorio.ObterTodos();
+            var resposta = repositorio.ObterTodosFuncionarios();
             return (List<FuncionarioEntity>)resposta;
-        }
-        //    public List<NacionalidadeEntity> ObterTodasNacionalidades()
-        //{
-        //    var repositorio = new NacionalidadeRepository();
-        //    var resposta = repositorio.ObterTodos();
-        //    return (List<NacionalidadeEntity>)resposta;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppModelo.Controller.Cadastros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,16 @@ namespace AppModelo.View.Windows
 {
     public partial class frmFuncionariosCadastrados : Form
     {
+        private FuncionarioController _funcionarioController = new FuncionarioController();
         public frmFuncionariosCadastrados()
         {
             InitializeComponent();
+            ExibirCadastroFuncionarios();
         }
-        private void ExibirCadastroFuncionario()
+        private void ExibirCadastroFuncionarios()
         {
-            gvFuncionariosCadastrados = 
+            var listaFuncionarios = _funcionarioController.ObterTodosFuncionarios();
+            gvFuncionariosCadastrados.DataSource = listaFuncionarios;
         }
     }
 }

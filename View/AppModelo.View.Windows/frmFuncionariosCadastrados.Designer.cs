@@ -37,14 +37,15 @@
             this.gvFuncionariosCadastrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvFuncionariosCadastrados.Location = new System.Drawing.Point(12, 12);
             this.gvFuncionariosCadastrados.Name = "gvFuncionariosCadastrados";
-            this.gvFuncionariosCadastrados.Size = new System.Drawing.Size(449, 150);
+            this.gvFuncionariosCadastrados.RowHeadersWidth = 45;
+            this.gvFuncionariosCadastrados.Size = new System.Drawing.Size(871, 316);
             this.gvFuncionariosCadastrados.TabIndex = 0;
             // 
             // frmFuncionariosCadastrados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 202);
+            this.ClientSize = new System.Drawing.Size(895, 342);
             this.Controls.Add(this.gvFuncionariosCadastrados);
             this.Name = "frmFuncionariosCadastrados";
             this.Text = "frmFuncionariosCadastrados";
