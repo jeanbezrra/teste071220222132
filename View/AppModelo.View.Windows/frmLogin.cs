@@ -46,7 +46,7 @@ namespace AppModelo.View.Windows
             }
         }
         /// <summary>
-        /// Evento de clique para recuperação de senha, após o clique o formulário é inicializado.
+        /// Evento de clique para recuperação de senha, após o clique o formulário "frmRecuperarSenha" é exbido.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

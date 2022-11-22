@@ -5,9 +5,6 @@ using AppModelo.View.Windows.Helpers;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-//using ComboBox = System.Windows.Forms.ComboBox;
-//using TextBox = System.Windows.Forms.TextBox;
-//using TrackBar = System.Windows.Forms.TrackBar;
 
 namespace AppModelo.View.Windows.Cadastros
 {
@@ -50,7 +47,6 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider.SetError(txtNome, "Digite seu nome completo");
                 return;
             }
-
             //verifica se digitou algum numero
             foreach (var letra in txtNome.Text)
             {

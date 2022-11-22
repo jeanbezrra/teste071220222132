@@ -14,9 +14,7 @@ namespace AppModelo.Controller.External
         public ViaCepWrapper Obter(string cep)
         {
             var service = new ViaCepServices();
-
             var viaCep = service.ObterDaApi(cep);
-
             return viaCep;
         }
     }

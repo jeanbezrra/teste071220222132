@@ -59,7 +59,6 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider2.Clear();
             }
         }
-
         private void btnAtualizarNaturalidade_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))

@@ -46,7 +46,6 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider1.Clear();
             }            
         }
-
         private void btnAtualizarNacionalidade_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
@@ -76,7 +75,6 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider1.Clear();
         }
-
         private void btnRemoverNacionalidade_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))

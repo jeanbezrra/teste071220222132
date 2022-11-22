@@ -24,7 +24,6 @@ namespace AppModelo.Controller.Seguranca
         {
             var repository = new UsuarioRepository();
             var usuario = repository.ObterPorEmail(email);
-
             if(usuario is null)
             {
                 return "Usuário não foi encontrado";
@@ -38,13 +37,9 @@ namespace AppModelo.Controller.Seguranca
             }
 
             var emailService = new EmailService();
-
             var mensagemHtml = @"<p><b>Criamos uma nova senha para você</b></p> <pSua nova senha é: <b>" + novaSenha + "</b>/p>";
-
             var emailEnviado = emailService.EnviarEmail(usuario.Nome, usuario.Email, "Recuperação de senha", mensagemHtml);
-
             return "";
-
         }
     }
 }

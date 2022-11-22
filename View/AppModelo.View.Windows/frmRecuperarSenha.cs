@@ -13,7 +13,6 @@ namespace AppModelo.View.Windows
         public frmRecuperarSenha()
         {
             InitializeComponent();
-
         }
         /// <summary>
         /// Evento de Click para recuperação de senha, quando o botão é clicado, através da classe "Validadores" o email passa pela validadção se
@@ -28,10 +27,9 @@ namespace AppModelo.View.Windows
             if (emailEhValido is false)
             {
                 errorProvider1.SetError(txtEmail, "Seu e-mail está errado");
-                txtEmail.Focus();
+                txtEmail.Focus();     
                 return;
             }
-
             var controller = new UsuarioController();
             var resultado = controller.RecuperarSenha(txtEmail.Text);
             MessageBox.Show(resultado);
