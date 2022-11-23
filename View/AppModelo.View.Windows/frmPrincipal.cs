@@ -1,4 +1,5 @@
-﻿using AppModelo.View.Windows.Cadastros;
+﻿
+using AppModelo.View.Windows.Cadastros;
 using System;
 using System.Windows.Forms;
 
@@ -30,7 +31,7 @@ namespace AppModelo.View.Windows
         /// <param name="e"></param>
         private void exibirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new frmFuncionariosCadastrados();
+            var form = new frmListaFuncionarios();
             form.Show();
         }
         /// <summary>
@@ -52,6 +53,6 @@ namespace AppModelo.View.Windows
         {
             var form = new frmNacionalidades();
             form.Show();
-        }
+        }      
     }
 }

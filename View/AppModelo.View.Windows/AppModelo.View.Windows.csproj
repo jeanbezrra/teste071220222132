@@ -53,6 +53,12 @@
     <Compile Include="Cadastros\frmCadastroFuncionario.Designer.cs">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\frmListaFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmListaFuncionarios.Designer.cs">
+      <DependentUpon>frmListaFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\frmNacionalidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +70,6 @@
     </Compile>
     <Compile Include="Cadastros\frmNaturalidade.Designer.cs">
       <DependentUpon>frmNaturalidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmFuncionariosCadastrados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmFuncionariosCadastrados.Designer.cs">
-      <DependentUpon>frmFuncionariosCadastrados.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -91,19 +91,21 @@
     </Compile>
     <Compile Include="Helpers\ExisteNumeroNoTexto.cs" />
     <Compile Include="Helpers\FormatarCamposObrigatorios.cs" />
+    <Compile Include="Helpers\LImparDadosFormulario.cs" />
+    <Compile Include="Helpers\ValidarCamposObrigatorios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cadastros\frmCadastroFuncionario.resx">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmListaFuncionarios.resx">
+      <DependentUpon>frmListaFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\frmNacionalidades.resx">
       <DependentUpon>frmNacionalidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\frmNaturalidade.resx">
       <DependentUpon>frmNaturalidade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmFuncionariosCadastrados.resx">
-      <DependentUpon>frmFuncionariosCadastrados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

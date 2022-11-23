@@ -13,8 +13,8 @@ namespace AppModelo.View.Windows.Cadastros
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
         private FuncionarioController _funcionarioController = new FuncionarioController();
-        public frmCadastroFuncionario()  
-        {            
+        public frmCadastroFuncionario()
+        {
             InitializeComponent();
             Componentes.FormatarCamposObrigatorios(this);
 
@@ -25,6 +25,8 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
             cmbNaturalidade.DisplayMember = "Descricao";
             cmbNaturalidade.ValueMember = "Id";
+
+            btnCadastrarFuncionario.Enabled = false;
         }
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
@@ -70,25 +72,7 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
-        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
-        {
-            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
-            int numero = int.Parse(txtEnderecoNumero.Text);
-            
-            int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
-            int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
-                   
-            var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
-            if (salvou)
-            {
-                MessageBox.Show("Cadastrado com sucesso");
-            }
-            else
-            {
-                MessageBox.Show("Erro ao cadastrar usuário");
-            }
-            limparDados(this);
-        }
+
         private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNaturalidade = cmbNaturalidade.SelectedValue;
@@ -99,68 +83,30 @@ namespace AppModelo.View.Windows.Cadastros
             var obterNacionalidade = cmbNacionalidade.SelectedValue;
             string Index = cmbNacionalidade.Text;
         }
-        public static void limparDados(Control ctrl)
+        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-            foreach (Control c in ctrl.Controls)
+            var validou = Componentes.ValidarCamposObrigatorios(this);
+            if (validou)
             {
-                if (c is TextBox)
-                {
-                    ((TextBox)c).Text = "";
-                }
-                else if (c is RichTextBox)
-                {
-                    ((RichTextBox)c).Text = "";
-                }
-                else if (c is ComboBox)
-                {
-                    ((ComboBox)c).SelectedIndex = -1;
-                }
-                else if (c is CheckBox)
-                {
-                    ((CheckBox)c).Checked = false;
-                }
-                else if (c is RadioButton)
-                {
-                    ((RadioButton)c).Checked = false;
-                }
-                else if (c is DateTimePicker)
-                {
-                    ((DateTimePicker)c).MinDate = new DateTime(1900, 1, 1);
-                    ((DateTimePicker)c).MaxDate = new DateTime(2100, 1, 1);
-                    ((DateTimePicker)c).Value = DateTime.Now.Date < ((DateTimePicker)c).MinDate ? ((DateTimePicker)c).MinDate : DateTime.Now.Date > ((DateTimePicker)c).MaxDate ? ((DateTimePicker)c).MaxDate : DateTime.Now.Date;
-                    if (((DateTimePicker)c).ShowCheckBox)
-                        ((DateTimePicker)c).Checked = false;
-                }
-                else if (c is NumericUpDown)
-                {
-                    ((NumericUpDown)c).Value = 0 < ((NumericUpDown)c).Minimum ? ((NumericUpDown)c).Minimum : 0 > ((NumericUpDown)c).Maximum ? ((NumericUpDown)c).Maximum : 0;// ((NumericUpDown)c).Minimum;
-                }
-                else if (c is PictureBox)
-                {
-                    ((PictureBox)c).Image = null;
-                }
-                else if (c is MaskedTextBox)
-                {
-                    ((MaskedTextBox)c).Text = "";
-                }
-                else if (c is Label)
-                {
-                    //((Label)c).Text = "";
-                }
-                else if (c is DataGridView)
-                {
-                    ((DataGridView)c).DataSource = null;
-                }
-                else if (c is TrackBar)
-                    ((TrackBar)c).Value = ((TrackBar)c).Minimum;
-                else if (c.HasChildren)
-                {
-                    if (c is TabControl)
-                        ((TabControl)c).SelectedIndex = 0;
-
-                    limparDados(c);
-                }
+                btnCadastrarFuncionario.Enabled = true;
             }
+                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+                int numero = int.Parse(txtEnderecoNumero.Text);
+
+                int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
+                int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
+
+                var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+                if (salvou)
+                {
+                    MessageBox.Show("Cadastrado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar usuário");
+                }
+            
+            Componentes.LimparDadosForm(this);
         }
     }
 }
