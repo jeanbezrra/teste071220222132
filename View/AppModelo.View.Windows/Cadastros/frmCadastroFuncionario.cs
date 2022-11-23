@@ -26,7 +26,6 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNaturalidade.DisplayMember = "Descricao";
             cmbNaturalidade.ValueMember = "Id";
 
-            btnCadastrarFuncionario.Enabled = false;
         }
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
@@ -85,13 +84,17 @@ namespace AppModelo.View.Windows.Cadastros
         }
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-            var validou = Componentes.ValidarCamposObrigatorios(this);
+            int numero = int.Parse(txtEnderecoNumero.Text);
+
+            var validou = Helpers.Componentes.ValidarCamposObrigatorios(txtNome.Text, txtDataNascimento.Text, txtCpf.Text, txtEmail.Text, txtTelefone.Text, numero);
             if (validou)
             {
-                btnCadastrarFuncionario.Enabled = true;
+                btnCadastrarFuncionario.Enabled = false;
             }
-                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
-                int numero = int.Parse(txtEnderecoNumero.Text);
+            else { 
+
+                btnCadastrarFuncionario.Enabled = true;
+                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);            
 
                 int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
                 int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
@@ -105,7 +108,7 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Erro ao cadastrar usuário");
                 }
-            
+            }
             Componentes.LimparDadosForm(this);
         }
     }
