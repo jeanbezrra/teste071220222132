@@ -4,8 +4,17 @@ using System;
 
 namespace AppModelo.Controller.Seguranca
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class UsuarioController
     {
+        /// <summary>
+        /// Efetua o login do usuario no programa.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="senha"></param>
+        /// <returns>Retorna a validação do email e senha se o usuario existir no banco de dados</returns>
         public bool EfetuarLogin(string usuario, string senha)
         {
             var repositorio = new UsuarioRepository();
@@ -20,6 +29,11 @@ namespace AppModelo.Controller.Seguranca
                 return false;
             }
         }
+        /// <summary>
+        /// Recupera a senha do usuário pelo email.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>Retorna a validação feita se o usuário existir no banco, a senha atualizada e um email é enviado para o usuário contendo sua nova senha</returns>
         public string RecuperarSenha(string email)
         {
             var repository = new UsuarioRepository();

@@ -4,9 +4,6 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Helpers
 {
-    /// <summary>
-    /// Classe para formatação de campos obrigatórios.
-    /// </summary>
     internal static partial class Componentes
     {
         /// <summary>

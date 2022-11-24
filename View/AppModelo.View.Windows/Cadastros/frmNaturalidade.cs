@@ -9,9 +9,6 @@ namespace AppModelo.View.Windows.Cadastros
     /// </summary>
     public partial class frmNaturalidade : Form
     {
-        /// <summary>
-        /// Variavel criada para instanciar a classe "NaturalidadeController"
-        /// </summary>
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
         public frmNaturalidade()
         {
@@ -59,6 +56,11 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider2.Clear();
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizarNaturalidade_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
@@ -91,6 +93,11 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider2.Clear();
             }           
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRemoverNaturalidade_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
@@ -114,11 +121,18 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider2.Clear();
             }          
         }
+        /// <summary>
+        /// 
+        /// </summary>
         private void AtualizarDataGrid()
         {
             var listaDeNaturalidades = _naturalidadeController.ObterTodasNaturalidades();
             gvNaturalidades.DataSource = listaDeNaturalidades;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ctrl"></param>
         public static void limparDados(Control ctrl)
         {
             foreach (Control c in ctrl.Controls)

@@ -8,7 +8,7 @@ namespace AppModelo.Controller.Cadastros
     public class FuncionarioController
     {
         /// <summary>
-        /// 
+        /// Cadastra o funcioário no banco de dados.
         /// </summary>
         /// <param name="naturalidade"></param>
         /// <param name="nacionalidade"></param>
@@ -26,7 +26,7 @@ namespace AppModelo.Controller.Cadastros
         /// <param name="bairro"></param>
         /// <param name="municipio"></param>
         /// <param name="uf"></param>
-        /// <returns></returns>
+        /// <returns>Retorna a requisição feita para inserir os dados dos funcionários cadastrados</returns>
         public bool Cadastrar(int naturalidade, int nacionalidade, string nome, DateTime datanascimento, bool genero, string cpf, string email, string telefone, string telefoneContato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
         {
             var repositorio = new FuncionarioRepository();
@@ -34,9 +34,9 @@ namespace AppModelo.Controller.Cadastros
             return resposta;
         }
         /// <summary>
-        /// 
+        /// Obtêm todos os funcionários cadastrados no banco de dados.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retorna a requisição feita para listar todos os funcionários existentes no banco de dados</returns>
         public List<FuncionarioEntity> ObterTodosFuncionarios()
         {
             var repositorio = new FuncionarioRepository();

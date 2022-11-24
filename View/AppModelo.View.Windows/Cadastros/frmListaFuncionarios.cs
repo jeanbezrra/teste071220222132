@@ -15,7 +15,7 @@ namespace AppModelo.View.Windows.Cadastros
             gerirGrid();
         }
         /// <summary>
-        /// Função para identar Data grid view, trazendo apenas as colunas nas quais ele gostaria de mostrar ao usuario 
+        /// Função para formatar Data grid view, trazendo apenas as colunas nas quais são nescessárias a serem mostradas. 
         /// </summary>
         public void gerirGrid()
         {

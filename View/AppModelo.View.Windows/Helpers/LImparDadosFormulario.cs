@@ -5,6 +5,10 @@ namespace AppModelo.View.Windows.Helpers
 {
     internal static partial class Componentes
     {
+        /// <summary>
+        /// Método genérico para limpar e esvaziar todos os campos presentes nos formularios que a utilizam. 
+        /// </summary>
+        /// <param name="texto"></param>
         internal static void LimparDadosForm(Control texto)
         {
             foreach (Control c in texto.Controls)

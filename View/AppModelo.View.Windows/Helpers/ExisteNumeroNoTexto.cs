@@ -1,8 +1,5 @@
 ﻿namespace AppModelo.View.Windows.Helpers
 {
-    /// <summary>
-    /// Classe para verificação de existência de numeros no texto.
-    /// </summary>
     internal static partial class Componentes
     {
         /// <summary>

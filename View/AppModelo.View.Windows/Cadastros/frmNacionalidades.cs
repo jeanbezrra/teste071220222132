@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class frmNacionalidades : Form
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
@@ -13,6 +16,11 @@ namespace AppModelo.View.Windows.Cadastros
 
             AtualizarDataGrid();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtDescricao.Text))
@@ -46,6 +54,11 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider1.Clear();
             }            
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizarNacionalidade_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
@@ -75,6 +88,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider1.Clear();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRemoverNacionalidade_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
@@ -98,11 +116,18 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider1.Clear();
         }
+        /// <summary>
+        /// 
+        /// </summary>
         private void AtualizarDataGrid()
         {
             var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
             gvNacionalidades.DataSource = listaDeNacionalidades;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ctrl"></param>
         public static void limparDados(Control ctrl)
         {
             foreach (Control c in ctrl.Controls)

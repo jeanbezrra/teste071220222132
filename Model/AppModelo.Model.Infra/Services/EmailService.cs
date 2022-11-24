@@ -7,7 +7,14 @@ namespace AppModelo.Model.Infra.Services
 {
     public class EmailService
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="email"></param>
+        /// <param name="assunto"></param>
+        /// <param name="mensagem"></param>
+        /// <returns></returns>
         public bool EnviarEmail(string nome, string email, string assunto, string mensagem)
         {
             try
@@ -31,47 +38,12 @@ namespace AppModelo.Model.Infra.Services
                     client.Send(mimeMessage);
                     client.Disconnect(true);
                 }
-
                 return true;
-
             }
             catch (Exception)
             {
                 return false;
             }
-
-        }
-        //public bool EnviarEmail(string nome, string email, string assunto, string mensagem)
-        //{
-        //    try
-        //    {
-        //        var mimeMessage = new MimeMessage();
-        //        mimeMessage.From.Add(new MailboxAddress("Sistema Senai", "teste@wwonline.com.br"));
-        //        mimeMessage.To.Add(new MailboxAddress(nome, email));
-
-        //        mimeMessage.Subject = assunto;
-
-        //        mimeMessage.Body = new TextPart("html")
-        //        {
-        //            Text = mensagem
-        //        };
-
-        //        using (var client = new SmtpClient())
-        //        {
-        //            client.Connect("smtp.gmail.com", 587, false);
-
-        //            client.Authenticate(nome, email);
-
-        //            client.Send(mimeMessage);
-        //            client.Disconnect(true);
-        //        }
-
-        //        return true;
-        //    }
-        //    catch (System.Exception)
-        //    {
-        //        return false;
-        //    }
-        //}   
+        }  
     }
 }

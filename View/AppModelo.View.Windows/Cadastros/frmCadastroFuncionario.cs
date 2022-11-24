@@ -25,8 +25,12 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
             cmbNaturalidade.DisplayMember = "Descricao";
             cmbNaturalidade.ValueMember = "Id";
-
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
             //Crio a instancia do Controllador
@@ -40,6 +44,11 @@ namespace AppModelo.View.Windows.Cadastros
             txtEnderecoMunicipio.Text = endereco.Localidade;
             txtEnderecoUf.Text = endereco.Uf;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
             //primeira regra nome < que 6 letras
@@ -60,6 +69,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtCpf_Validating(object sender, CancelEventArgs e)
         {
             var cpf = txtCpf.Text;
@@ -71,43 +85,46 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNaturalidade = cmbNaturalidade.SelectedValue;
             string Index = cmbNaturalidade.Text;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNacionalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterNacionalidade = cmbNacionalidade.SelectedValue;
             string Index = cmbNacionalidade.Text;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             int numero = int.Parse(txtEnderecoNumero.Text);
+            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+            int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
+            int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
 
-            var validou = Helpers.Componentes.ValidarCamposObrigatorios(txtNome.Text, txtDataNascimento.Text, txtCpf.Text, txtEmail.Text, txtTelefone.Text, numero);
-            if (validou)
+            var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+            if (salvou)
             {
-                btnCadastrarFuncionario.Enabled = false;
+                MessageBox.Show("Cadastrado com sucesso");
             }
-            else { 
-
-                btnCadastrarFuncionario.Enabled = true;
-                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);            
-
-                int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
-                int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
-
-                var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
-                if (salvou)
-                {
-                    MessageBox.Show("Cadastrado com sucesso");
-                }
-                else
-                {
-                    MessageBox.Show("Erro ao cadastrar usuário");
-                }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar usuário");
             }
             Componentes.LimparDadosForm(this);
         }

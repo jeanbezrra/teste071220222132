@@ -25,7 +25,7 @@ namespace AppModelo.View.Windows
             form.Show();
         }
         /// <summary>
-        /// Evento de Click, após o botão ser clicado o formulário "frmFuncionariosCadastrados" é exibido.
+        /// Evento de Click, após o botão ser clicado o formulário "frmListaFuncionarios" é exibido.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
