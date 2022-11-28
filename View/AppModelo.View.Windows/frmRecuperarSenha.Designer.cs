@@ -40,11 +40,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(114, 37);
+            this.label1.Font = new System.Drawing.Font("Impact", 21.73585F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(55, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 33);
+            this.label1.Size = new System.Drawing.Size(256, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recuperar senha";
             // 
@@ -52,35 +52,39 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(88, 100);
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.Location = new System.Drawing.Point(31, 100);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(304, 26);
+            this.txtEmail.Size = new System.Drawing.Size(304, 27);
             this.txtEmail.TabIndex = 1;
             // 
             // btnRecuperarSenha
             // 
-            this.btnRecuperarSenha.BackColor = System.Drawing.Color.Silver;
+            this.btnRecuperarSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
+            this.btnRecuperarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRecuperarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecuperarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecuperarSenha.Location = new System.Drawing.Point(88, 149);
+            this.btnRecuperarSenha.ForeColor = System.Drawing.Color.White;
+            this.btnRecuperarSenha.Location = new System.Drawing.Point(31, 152);
             this.btnRecuperarSenha.Name = "btnRecuperarSenha";
-            this.btnRecuperarSenha.Size = new System.Drawing.Size(304, 32);
+            this.btnRecuperarSenha.Size = new System.Drawing.Size(304, 41);
             this.btnRecuperarSenha.TabIndex = 2;
-            this.btnRecuperarSenha.Text = "RECUPERAR ACESSO";
+            this.btnRecuperarSenha.Text = "Recuperar acesso";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
             this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(88, 196);
+            this.btnCancelar.Location = new System.Drawing.Point(31, 214);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(304, 32);
+            this.btnCancelar.Size = new System.Drawing.Size(304, 41);
             this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -92,13 +96,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(17)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(480, 272);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
+            this.ClientSize = new System.Drawing.Size(365, 280);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRecuperarSenha);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmRecuperarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

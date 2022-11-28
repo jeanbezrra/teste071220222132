@@ -86,8 +86,10 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Location = new System.Drawing.Point(241, 92);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
@@ -98,7 +100,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -108,8 +110,10 @@
             // 
             // btnRemoverNacionalidade
             // 
-            this.btnRemoverNacionalidade.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoverNacionalidade.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoverNacionalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoverNacionalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverNacionalidade.ForeColor = System.Drawing.Color.Black;
             this.btnRemoverNacionalidade.Location = new System.Drawing.Point(241, 268);
             this.btnRemoverNacionalidade.Name = "btnRemoverNacionalidade";
             this.btnRemoverNacionalidade.Size = new System.Drawing.Size(75, 23);
@@ -120,8 +124,10 @@
             // 
             // btnAtualizarNacionalidade
             // 
-            this.btnAtualizarNacionalidade.BackColor = System.Drawing.Color.Orange;
+            this.btnAtualizarNacionalidade.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAtualizarNacionalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarNacionalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarNacionalidade.ForeColor = System.Drawing.Color.Black;
             this.btnAtualizarNacionalidade.Location = new System.Drawing.Point(138, 268);
             this.btnAtualizarNacionalidade.Name = "btnAtualizarNacionalidade";
             this.btnAtualizarNacionalidade.Size = new System.Drawing.Size(75, 23);
@@ -138,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(333, 303);
             this.Controls.Add(this.btnAtualizarNacionalidade);
             this.Controls.Add(this.btnRemoverNacionalidade);
@@ -148,9 +155,10 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmNacionalidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "frmNacionalidades";
+            this.Text = "Nacionalidades";
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

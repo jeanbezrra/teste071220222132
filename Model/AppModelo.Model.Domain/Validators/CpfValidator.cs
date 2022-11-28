@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppModelo.Model.Domain.Validators
+﻿namespace AppModelo.Model.Domain.Validators
 {//classe static não instacia com new
     public static partial class Validadores
     {

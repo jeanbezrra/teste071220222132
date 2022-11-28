@@ -46,7 +46,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -88,12 +88,16 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Location = new System.Drawing.Point(388, 92);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // gvNaturalidades
@@ -101,6 +105,7 @@
             this.gvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNaturalidades.Location = new System.Drawing.Point(15, 132);
             this.gvNaturalidades.Name = "gvNaturalidades";
+            this.gvNaturalidades.RowHeadersWidth = 45;
             this.gvNaturalidades.Size = new System.Drawing.Size(448, 160);
             this.gvNaturalidades.TabIndex = 13;
             // 
@@ -109,6 +114,7 @@
             this.chkStatus.AutoSize = true;
             this.chkStatus.Checked = true;
             this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkStatus.Location = new System.Drawing.Point(320, 98);
             this.chkStatus.Name = "chkStatus";
             this.chkStatus.Size = new System.Drawing.Size(50, 17);
@@ -122,7 +128,8 @@
             // 
             // btnAtualizarNaturalidade
             // 
-            this.btnAtualizarNaturalidade.BackColor = System.Drawing.Color.Orange;
+            this.btnAtualizarNaturalidade.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAtualizarNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(285, 308);
             this.btnAtualizarNaturalidade.Name = "btnAtualizarNaturalidade";
@@ -134,7 +141,8 @@
             // 
             // btnRemoverNaturalidade
             // 
-            this.btnRemoverNaturalidade.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRemoverNaturalidade.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoverNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoverNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverNaturalidade.Location = new System.Drawing.Point(388, 308);
             this.btnRemoverNaturalidade.Name = "btnRemoverNaturalidade";
@@ -148,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(478, 343);
             this.Controls.Add(this.btnAtualizarNaturalidade);
             this.Controls.Add(this.btnRemoverNaturalidade);
@@ -159,9 +168,10 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "frmNaturalidade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "frmNaturalidade";
+            this.Text = "Naturalidades";
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
