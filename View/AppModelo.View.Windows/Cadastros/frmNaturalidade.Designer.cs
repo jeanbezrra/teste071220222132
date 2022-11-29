@@ -102,8 +102,9 @@
             // 
             // gvNaturalidades
             // 
+            this.gvNaturalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.gvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNaturalidades.Location = new System.Drawing.Point(15, 132);
+            this.gvNaturalidades.Location = new System.Drawing.Point(12, 136);
             this.gvNaturalidades.Name = "gvNaturalidades";
             this.gvNaturalidades.RowHeadersWidth = 45;
             this.gvNaturalidades.Size = new System.Drawing.Size(448, 160);
@@ -131,7 +132,7 @@
             this.btnAtualizarNaturalidade.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAtualizarNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(285, 308);
+            this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(295, 316);
             this.btnAtualizarNaturalidade.Name = "btnAtualizarNaturalidade";
             this.btnAtualizarNaturalidade.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizarNaturalidade.TabIndex = 16;
@@ -144,7 +145,7 @@
             this.btnRemoverNaturalidade.BackColor = System.Drawing.SystemColors.Control;
             this.btnRemoverNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoverNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoverNaturalidade.Location = new System.Drawing.Point(388, 308);
+            this.btnRemoverNaturalidade.Location = new System.Drawing.Point(388, 316);
             this.btnRemoverNaturalidade.Name = "btnRemoverNaturalidade";
             this.btnRemoverNaturalidade.Size = new System.Drawing.Size(75, 23);
             this.btnRemoverNaturalidade.TabIndex = 15;
@@ -157,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(478, 343);
+            this.ClientSize = new System.Drawing.Size(478, 359);
             this.Controls.Add(this.btnAtualizarNaturalidade);
             this.Controls.Add(this.btnRemoverNaturalidade);
             this.Controls.Add(this.chkStatus);

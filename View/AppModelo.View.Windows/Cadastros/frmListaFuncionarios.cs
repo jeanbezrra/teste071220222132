@@ -1,17 +1,16 @@
 ﻿using AppModelo.Controller.Cadastros;
+using System;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmListaFuncionarios : Form
     {
+        FuncionarioController _funcionarioController = new FuncionarioController();
         public frmListaFuncionarios()
         {
-            FuncionarioController _funcionarioController = new FuncionarioController();
-
             InitializeComponent();
-            var listaFuncionarios = _funcionarioController.ObterTodosFuncionarios();
-            gvListaFuncionarios.DataSource = listaFuncionarios;
+            AtualizarDataGrid();
             gerirGrid();
         }
         /// <summary>
@@ -49,6 +48,54 @@ namespace AppModelo.View.Windows.Cadastros
             gvListaFuncionarios.Columns[13].Visible = false;
             gvListaFuncionarios.Columns[14].Visible = false;
             gvListaFuncionarios.Columns[15].Visible = false;
+        }
+        /// <summary>
+        /// Evento de clique para remover um funcionário.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnRemoverFuncionario_Click(object sender, System.EventArgs e)
+        {
+            /// verifico se o usuário digitou o campo em branco ou possui espaços.
+            if (String.IsNullOrWhiteSpace(txtId.Text))
+            {
+                errorProvider1.SetError(txtId, "Digite o ID para remover o funcionário");
+                return;
+            }
+            else
+            {
+                var removeu = _funcionarioController.Remover(txtId.Text);
+                if (removeu)
+                {
+                    MessageBox.Show("Funcionário removido com Êxito!");
+                    txtId.Text = string.Empty;
+                    AtualizarDataGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Houve um erro ao remover o funcionário");
+                    limparDados(this);
+                }
+            }
+            errorProvider1.Clear();        
+        }
+        /// <summary>
+        /// Método para atualizar DataGridView dos dados de funcionários quando inicializado ou removido.
+        /// </summary>
+        public void AtualizarDataGrid()
+        {
+            var listaFuncionarios = _funcionarioController.ObterTodosFuncionarios();
+            gvListaFuncionarios.DataSource = listaFuncionarios;
+        }
+        public static void limparDados(Control ctrl)
+        {
+            foreach (Control c in ctrl.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = "";
+                }
+            }
         }
     }
 }

@@ -69,13 +69,14 @@ namespace AppModelo.View.Windows.Cadastros
                 return;
             }
             errorProvider2.Clear();
+
             if (String.IsNullOrWhiteSpace(txtDescricao.Text))
             {
                 errorProvider2.SetError(txtDescricao, "Digite a naturalidade para atualizá-la");
                 return;
             }
             else
-            {
+            {               
                 var descricaoMaiuscula = txtDescricao.Text.ToUpper();
                 var atualizou = _naturalidadeController.Atualizar(descricaoMaiuscula, txtId.Text);
 
@@ -122,7 +123,7 @@ namespace AppModelo.View.Windows.Cadastros
             }          
         }
         /// <summary>
-        /// 
+        /// Método para atualizar DataGridView dos dados de Naturalidades quando inicializado ou alterado.
         /// </summary>
         private void AtualizarDataGrid()
         {
@@ -130,7 +131,7 @@ namespace AppModelo.View.Windows.Cadastros
             gvNaturalidades.DataSource = listaDeNaturalidades;
         }
         /// <summary>
-        /// 
+        /// Limpa dados digitados nos campos de textbox.
         /// </summary>
         /// <param name="ctrl"></param>
         public static void limparDados(Control ctrl)

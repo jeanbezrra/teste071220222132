@@ -37,6 +37,8 @@ namespace AppModelo.Model.Infra.Repositories
         /// <returns>Retorna a requisição feita de atualizar a descrição pelo id</returns>
         public bool Atualizar(string descricao, string id)
         {
+            //var dataAlterada = DateTime.Now.ToString("u");
+
             var sql = $"UPDATE naturalidades SET descricao = '{descricao}' WHERE id = '{id}'";
             
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
@@ -64,7 +66,7 @@ namespace AppModelo.Model.Infra.Repositories
         /// <returns>Retorna a requisição feita de Obter a naturalidade e todos os seus campos</returns>
         public IEnumerable<NaturalidadeEntity> ObterTodos()
         {
-            var sql = "SELECT id, descricao FROM naturalidades";
+            var sql = "SELECT * FROM naturalidades";
             
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);

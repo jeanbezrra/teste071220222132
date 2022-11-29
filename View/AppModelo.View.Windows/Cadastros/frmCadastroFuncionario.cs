@@ -51,7 +51,6 @@ namespace AppModelo.View.Windows.Cadastros
         /// <param name="e"></param>
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
-            //primeira regra nome < que 6 letras
             if (txtNome.Text.Length < 6)
             {
                 errorProvider.SetError(txtNome, "Digite seu nome completo");
@@ -62,8 +61,7 @@ namespace AppModelo.View.Windows.Cadastros
             {
                 if (char.IsNumber(letra))
                 {
-                    errorProvider
-                        .SetError(txtNome, "Seu nome parece estar errado");
+                    errorProvider.SetError(txtNome, "Seu nome parece estar errado");
                     return;
                 }
             }
@@ -112,21 +110,22 @@ namespace AppModelo.View.Windows.Cadastros
         /// <param name="e"></param>
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-            int numero = int.Parse(txtEnderecoNumero.Text);
-            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
-            int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
-            int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
+            try {
+                int numero = int.Parse(txtEnderecoNumero.Text);
+                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+                int obterNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
+                int obterNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
 
-            var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
-            if (salvou)
-            {
-                MessageBox.Show("Cadastrado com sucesso");
+                var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+                
+                MessageBox.Show("Salvo com sucesso");
+
+                Componentes.LimparDadosForm(this);
             }
-            else
+            catch (Exception err)
             {
-                MessageBox.Show("Erro ao cadastrar usuário");
+                MessageBox.Show("Erro! " + err.Message);
             }
-            Componentes.LimparDadosForm(this);
         }
     }
 }
