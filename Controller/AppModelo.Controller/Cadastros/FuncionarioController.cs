@@ -43,6 +43,11 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.ObterTodosFuncionarios();
             return (List<FuncionarioEntity>)resposta;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool Remover(string id)
         {
             var repositorio = new FuncionarioRepository();

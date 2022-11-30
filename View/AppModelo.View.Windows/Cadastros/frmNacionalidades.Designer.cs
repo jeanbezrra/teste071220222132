@@ -36,10 +36,10 @@
             this.gvNacionalidades = new System.Windows.Forms.DataGridView();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnRemoverNacionalidade = new System.Windows.Forms.Button();
             this.btnAtualizarNacionalidade = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -111,6 +111,17 @@
             this.panel1.Size = new System.Drawing.Size(333, 35);
             this.panel1.TabIndex = 6;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(11, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(209, 25);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Lista de nacionalidades";
+            // 
             // btnRemoverNacionalidade
             // 
             this.btnRemoverNacionalidade.BackColor = System.Drawing.SystemColors.Control;
@@ -142,17 +153,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(11, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 23);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Lista de nacionalidades";
             // 
             // frmNacionalidades
             // 

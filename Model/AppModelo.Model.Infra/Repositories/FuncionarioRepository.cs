@@ -56,6 +56,11 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool Remover(string id)
         {
             var sql = $"DELETE FROM funcionarios WHERE id = '{id}'";
