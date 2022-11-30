@@ -39,14 +39,16 @@
             this.btnRemoverNacionalidade = new System.Windows.Forms.Button();
             this.btnAtualizarNacionalidade = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 35);
+            this.label1.Location = new System.Drawing.Point(12, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
@@ -55,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 78);
+            this.label2.Location = new System.Drawing.Point(12, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
@@ -63,14 +65,14 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(15, 52);
+            this.txtId.Location = new System.Drawing.Point(15, 57);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(55, 20);
             this.txtId.TabIndex = 2;
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(15, 94);
+            this.txtDescricao.Location = new System.Drawing.Point(15, 99);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(197, 20);
             this.txtDescricao.TabIndex = 3;
@@ -90,7 +92,7 @@
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(241, 92);
+            this.btnSalvar.Location = new System.Drawing.Point(241, 97);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 5;
@@ -101,11 +103,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 30);
+            this.panel1.Size = new System.Drawing.Size(333, 35);
             this.panel1.TabIndex = 6;
             // 
             // btnRemoverNacionalidade
@@ -140,6 +143,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(11, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 23);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Lista de nacionalidades";
+            // 
             // frmNacionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,11 +169,14 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "frmNacionalidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Nacionalidades";
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,5 +195,6 @@
         private System.Windows.Forms.Button btnRemoverNacionalidade;
         private System.Windows.Forms.Button btnAtualizarNacionalidade;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label3;
     }
 }
