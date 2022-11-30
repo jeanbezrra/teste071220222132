@@ -102,7 +102,8 @@
             // 
             // gvNaturalidades
             // 
-            this.gvNaturalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.gvNaturalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            this.gvNaturalidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNaturalidades.Location = new System.Drawing.Point(12, 136);
             this.gvNaturalidades.Name = "gvNaturalidades";

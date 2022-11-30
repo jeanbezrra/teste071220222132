@@ -13,8 +13,7 @@ namespace AppModelo.View.Windows.Cadastros
         public frmNaturalidade()
         {
             InitializeComponent();
-            var listaDeNaturalidades = _naturalidadeController.ObterTodasNaturalidades();
-            gvNaturalidades.DataSource = listaDeNaturalidades;
+            AtualizarDataGrid();
         }
         /// <summary>
         /// Evento de clique para salvar uma naturalidade informada, após o clique é feita a validação do texto digitado 

@@ -37,9 +37,9 @@ namespace AppModelo.Model.Infra.Repositories
         /// <returns>Retorna a requisição feita de atualizar a descrição pelo id</returns>
         public bool Atualizar(string descricao, string id)
         {
-            //var dataAlterada = DateTime.Now.ToString("u");
+            var dataAlterada = DateTime.Now.ToString("u");
 
-            var sql = $"UPDATE naturalidades SET descricao = '{descricao}' WHERE id = '{id}'";
+            var sql = $"UPDATE naturalidades SET descricao = '{descricao}', dataAlteracao = '{dataAlterada}' WHERE id = '{id}'";
             
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);

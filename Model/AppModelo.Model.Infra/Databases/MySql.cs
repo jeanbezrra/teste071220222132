@@ -8,7 +8,7 @@
         /// <returns>Retorna a requisição de conexão com o banco</returns>
         public static string ConectionString()
         {
-            var conn = "server=mysql.wwonline.com.br;database=wwonline05;uid=wwonline05;password=aluno22senai;";
+            var conn = "server=mysql.wwonline.com.br;database=wwonline05;uid=wwonline05;password=aluno22senai;Convert Zero Datetime=True;";
             return conn;
         }
     }
