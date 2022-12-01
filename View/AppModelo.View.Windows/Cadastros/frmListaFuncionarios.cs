@@ -4,9 +4,18 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
 {
+    /// <summary>
+    /// Formulário para listagem de funcionários cadastrados.
+    /// </summary>
     public partial class frmListaFuncionarios : Form
     {
+        /// <summary>
+        /// Instacia classe do funcionário controller.
+        /// </summary>
         FuncionarioController _funcionarioController = new FuncionarioController();
+        /// <summary>
+        /// Construtor contendo o método para atualizar e formatar DataGridView
+        /// </summary>
         public frmListaFuncionarios()
         {
             InitializeComponent();
@@ -50,13 +59,12 @@ namespace AppModelo.View.Windows.Cadastros
             gvListaFuncionarios.Columns[15].Visible = false;
         }
         /// <summary>
-        /// Evento de clique para remover um funcionário.
+        /// Evento de clique para remover um funcionário no banco de dados.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnRemoverFuncionario_Click(object sender, System.EventArgs e)
         {
-            /// verifico se o usuário digitou o campo em branco ou possui espaços.
             if (String.IsNullOrWhiteSpace(txtId.Text))
             {
                 errorProvider1.SetError(txtId, "Digite o ID para remover o funcionário");
@@ -87,6 +95,10 @@ namespace AppModelo.View.Windows.Cadastros
             var listaFuncionarios = _funcionarioController.ObterTodosFuncionarios();
             gvListaFuncionarios.DataSource = listaFuncionarios;
         }
+        /// <summary>
+        /// Limpa campos de tipo textbox do formulário.
+        /// </summary>
+        /// <param name="ctrl"></param>
         public static void limparDados(Control ctrl)
         {
             foreach (Control c in ctrl.Controls)

@@ -8,7 +8,7 @@ using System.Data;
 namespace AppModelo.Model.Infra.Repositories
 {
     /// <summary>
-    /// Responsavel pela conexão do banco de dados com o programa.
+    /// Responsável pela conexão do banco de dados com o programa.
     /// </summary>
     public class FuncionarioRepository
     {
@@ -31,7 +31,7 @@ namespace AppModelo.Model.Infra.Repositories
         /// <param name="bairro"></param>
         /// <param name="municipio"></param>
         /// <param name="uf"></param>
-        /// <returns>Retorna a requisição feita de inserir um novo funcionario pelos dados parametrizados</returns>
+        /// <returns>Retorna a requisição feita de inserir um novo funcionário pelos dados parametrizados</returns>
         public bool Iserir(int naturalidade, int nacionalidade, string nome, DateTime dataNascimento, bool genero, string cpf, string email, string telefone, string telefoneContato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
         {
             var dataConvertida = dataNascimento.ToString("yyyy-MM-dd");
@@ -57,10 +57,10 @@ namespace AppModelo.Model.Infra.Repositories
             return resultado;
         }
         /// <summary>
-        /// 
+        /// Remove um funcionário pelo id informado.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>Retorna a requisição feita de remover o funcionário pelo id</returns>
         public bool Remover(string id)
         {
             var sql = $"DELETE FROM funcionarios WHERE id = '{id}'";

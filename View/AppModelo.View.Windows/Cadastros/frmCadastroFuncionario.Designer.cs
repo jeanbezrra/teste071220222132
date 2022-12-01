@@ -330,7 +330,7 @@
             // 
             this.rbMasculino.AutoSize = true;
             this.rbMasculino.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbMasculino.Location = new System.Drawing.Point(503, 149);
+            this.rbMasculino.Location = new System.Drawing.Point(503, 144);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(94, 24);
             this.rbMasculino.TabIndex = 29;

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 namespace AppModelo.View.Windows.Cadastros
 {
     /// <summary>
-    /// 
+    /// Formulário para cadastro de nacionalidades.
     /// </summary>
     public partial class frmNacionalidades : Form
     {
@@ -17,7 +17,7 @@ namespace AppModelo.View.Windows.Cadastros
             AtualizarDataGrid();
         }
         /// <summary>
-        /// 
+        /// Evento de clique para salvar uma nacionalidade no banco de dados.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -37,6 +37,7 @@ namespace AppModelo.View.Windows.Cadastros
                         errorProvider1.SetError(txtDescricao, "A nacionalidade parece estar errada");
                         return;
                     }
+                    errorProvider1.Clear();
                 }
                 errorProvider1.Clear();
                 var salvou = _nacionalidadeController.Cadastrar(txtDescricao.Text);
@@ -51,11 +52,11 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Houve um erro ao salvar no banco de dados");
                 }
-                errorProvider1.Clear();
-            }            
+            }
+            errorProvider1.Clear();
         }
         /// <summary>
-        /// 
+        /// Método para atualizar uma nacionalidade no banco de dados.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -89,7 +90,7 @@ namespace AppModelo.View.Windows.Cadastros
             errorProvider1.Clear();
         }
         /// <summary>
-        /// 
+        /// Método para remover uma nacionalidade do banco de dados.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -117,7 +118,7 @@ namespace AppModelo.View.Windows.Cadastros
             errorProvider1.Clear();
         }
         /// <summary>
-        /// 
+        /// Método para atualizar DataGridView dos dados de Nacionalidades quando inicializado ou alterado.
         /// </summary>
         private void AtualizarDataGrid()
         {
@@ -125,7 +126,7 @@ namespace AppModelo.View.Windows.Cadastros
             gvNacionalidades.DataSource = listaDeNacionalidades;
         }
         /// <summary>
-        /// 
+        /// Limpa dados digitados nos campos de textbox.
         /// </summary>
         /// <param name="ctrl"></param>
         public static void limparDados(Control ctrl)

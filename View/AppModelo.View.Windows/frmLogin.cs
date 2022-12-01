@@ -27,7 +27,7 @@ namespace AppModelo.View.Windows
             var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
             if (emailEhValido is false)
             {
-                errorProvider1.SetError(txtEmail, "Seu e-mail está errado");
+                errorProvider1.SetError(txtEmail, "Digite um e-mail válido");
                 txtEmail.Focus();
                 return;
             }

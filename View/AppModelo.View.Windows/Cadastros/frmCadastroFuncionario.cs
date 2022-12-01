@@ -8,11 +8,20 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
 {
+    /// <summary>
+    /// Formulário para cadastrar funcionários.
+    /// </summary>
     public partial class frmCadastroFuncionario : Form
     {
+        /// <summary>
+        /// Instância das classes controllers de nacionalidade, naturalidade e funcionário.
+        /// </summary>
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
         private FuncionarioController _funcionarioController = new FuncionarioController();
+        /// <summary>
+        /// Construtor do formulário.
+        /// </summary>
         public frmCadastroFuncionario()
         {
             InitializeComponent();
@@ -27,7 +36,7 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNaturalidade.ValueMember = "Id";
         }
         /// <summary>
-        /// 
+        /// Botão de pesquisar o cep digitado.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -45,7 +54,7 @@ namespace AppModelo.View.Windows.Cadastros
             txtEnderecoUf.Text = endereco.Uf;
         }
         /// <summary>
-        /// 
+        /// Validação do nome digitado. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -68,7 +77,7 @@ namespace AppModelo.View.Windows.Cadastros
             errorProvider.Clear();
         }
         /// <summary>
-        /// 
+        /// Validação do cpf digitado.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -84,7 +93,7 @@ namespace AppModelo.View.Windows.Cadastros
             errorProvider.Clear();
         }
         /// <summary>
-        /// 
+        /// Seleção da naturalidade.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -94,7 +103,7 @@ namespace AppModelo.View.Windows.Cadastros
             string Index = cmbNaturalidade.Text;
         }
         /// <summary>
-        /// 
+        /// Seleção da nacionalidade.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -104,7 +113,7 @@ namespace AppModelo.View.Windows.Cadastros
             string Index = cmbNacionalidade.Text;
         }
         /// <summary>
-        /// 
+        /// Botão para cadastro de funcionários.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -124,7 +133,7 @@ namespace AppModelo.View.Windows.Cadastros
             }
             catch (Exception err)
             {
-                MessageBox.Show("Erro! " + err.Message);
+                MessageBox.Show("Erro! Verifique se todos os campos obrigatórios estão preenchidos corretamente. " + err.Message);
             }
         }
     }

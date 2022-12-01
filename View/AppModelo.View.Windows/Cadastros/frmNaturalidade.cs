@@ -9,6 +9,9 @@ namespace AppModelo.View.Windows.Cadastros
     /// </summary>
     public partial class frmNaturalidade : Form
     {
+        /// <summary>
+        /// Instância de classe NaturalidadeController.  
+        /// </summary>
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
         public frmNaturalidade()
         {
@@ -16,9 +19,7 @@ namespace AppModelo.View.Windows.Cadastros
             AtualizarDataGrid();
         }
         /// <summary>
-        /// Evento de clique para salvar uma naturalidade informada, após o clique é feita a validação do texto digitado 
-        /// afim de encontrar algum número, pelo método "ExisteNumeroNoTexto", se encontrado um ErrorProvider é gerado. 
-        /// Caso seja validado, a naturalidade é formatada tornando todas maiúscula e enviada para método "Cadastrar".  
+        /// Evento de clique para salvar uma naturalidade no banco de dados.  
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -32,6 +33,8 @@ namespace AppModelo.View.Windows.Cadastros
                 txtDescricao.Focus();
                 return;
             }
+            errorProvider2.Clear();
+
             if (String.IsNullOrWhiteSpace(txtDescricao.Text))
             {
                 errorProvider2.SetError(txtDescricao, "Digite a naturalidade para salvá-la");
@@ -52,11 +55,11 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Houve um erro ao salvar no banco de dados");
                 }
-                errorProvider2.Clear();
             }
+            errorProvider2.Clear();
         }
         /// <summary>
-        /// 
+        /// Método para atualizar uma naturalidade no banco de dados.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,14 +67,14 @@ namespace AppModelo.View.Windows.Cadastros
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
             {
-                errorProvider2.SetError(txtId, "Digite o ID para atualizar");
+                errorProvider2.SetError(txtId, "Digite o ID para atualizar");               
                 return;
             }
             errorProvider2.Clear();
 
             if (String.IsNullOrWhiteSpace(txtDescricao.Text))
             {
-                errorProvider2.SetError(txtDescricao, "Digite a naturalidade para atualizá-la");
+                errorProvider2.SetError(txtDescricao, "Digite a naturalidade para atualizá-la");         
                 return;
             }
             else
@@ -90,11 +93,11 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Houve um erro ao atualizar no banco de dados");
                 }
-                errorProvider2.Clear();
-            }           
+            }
+            errorProvider2.Clear();
         }
         /// <summary>
-        /// 
+        /// Método para remover uma naturalidade do banco de dados.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -118,8 +121,8 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Houve um erro ao remover no banco de dados");
                 }
-                errorProvider2.Clear();
-            }          
+            }
+            errorProvider2.Clear();
         }
         /// <summary>
         /// Método para atualizar DataGridView dos dados de Naturalidades quando inicializado ou alterado.
@@ -130,7 +133,7 @@ namespace AppModelo.View.Windows.Cadastros
             gvNaturalidades.DataSource = listaDeNaturalidades;
         }
         /// <summary>
-        /// Limpa dados digitados nos campos de textbox.
+        /// Limpa dados digitados nos campos de tipo textbox.
         /// </summary>
         /// <param name="ctrl"></param>
         public static void limparDados(Control ctrl)

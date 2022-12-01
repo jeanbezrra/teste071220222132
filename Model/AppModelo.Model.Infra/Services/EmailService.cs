@@ -14,7 +14,7 @@ namespace AppModelo.Model.Infra.Services
         /// <param name="email"></param>
         /// <param name="assunto"></param>
         /// <param name="mensagem"></param>
-        /// <returns></returns>
+        /// <returns>Retorna a requsisição feita de enviar email para o usuário</returns>
         public bool EnviarEmail(string nome, string email, string assunto, string mensagem)
         {
             try

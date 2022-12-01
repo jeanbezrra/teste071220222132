@@ -44,10 +44,10 @@ namespace AppModelo.Controller.Cadastros
             return (List<FuncionarioEntity>)resposta;
         }
         /// <summary>
-        /// 
+        /// Remove o funcionário digitado.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>Retorna a requsisição feita para remover o funcionário pelo id</returns>
         public bool Remover(string id)
         {
             var repositorio = new FuncionarioRepository();

@@ -4,9 +4,6 @@ using System;
 
 namespace AppModelo.Controller.Seguranca
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class UsuarioController
     {
         /// <summary>
@@ -14,7 +11,7 @@ namespace AppModelo.Controller.Seguranca
         /// </summary>
         /// <param name="usuario"></param>
         /// <param name="senha"></param>
-        /// <returns>Retorna a validação do email e senha se o usuario existir no banco de dados</returns>
+        /// <returns>Retorna a validação do email e senha se o usuário existir no banco de dados</returns>
         public bool EfetuarLogin(string usuario, string senha)
         {
             var repositorio = new UsuarioRepository();
