@@ -12,7 +12,7 @@ namespace AppModelo.Model.Infra.Services
         /// Obtêm o cep de uma api.
         /// </summary>
         /// <param name="cep"></param>
-        /// <returns>Retorna a requsisição feita de obtero cep atráves da api ViaCep</returns>
+        /// <returns>Retorna a requsisição feita de obter o cep atráves da api ViaCep</returns>
         public ViaCepWrapper ObterDaApi(string cep)
         {
             //Como o metodo precisa retornar um ViaCepWrapper, é criada um instancia vazia para retornar ela caso dê erro.

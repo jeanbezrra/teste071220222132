@@ -26,7 +26,7 @@ namespace AppModelo.Controller.Cadastros
         /// <param name="bairro"></param>
         /// <param name="municipio"></param>
         /// <param name="uf"></param>
-        /// <returns>Retorna a requisição feita para inserir os dados dos funcionários cadastrados</returns>
+        /// <returns>Retorna a requisição feita para inserir os dados do funcionário</returns>
         public bool Cadastrar(int naturalidade, int nacionalidade, string nome, DateTime datanascimento, bool genero, string cpf, string email, string telefone, string telefoneContato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
         {
             var repositorio = new FuncionarioRepository();
@@ -47,7 +47,7 @@ namespace AppModelo.Controller.Cadastros
         /// Remove o funcionário digitado.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>Retorna a requsisição feita para remover o funcionário pelo id</returns>
+        /// <returns>Retorna a requsição feita para remover o funcionário pelo id</returns>
         public bool Remover(string id)
         {
             var repositorio = new FuncionarioRepository();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.funcionáriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,7 @@
             this.naturalidadeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(314, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(314, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "frmPrincipal";
             // 
@@ -57,34 +58,34 @@
             this.cadastrarToolStripMenuItem,
             this.exibirToolStripMenuItem});
             this.funcionáriosToolStripMenuItem1.Name = "funcionáriosToolStripMenuItem1";
-            this.funcionáriosToolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
+            this.funcionáriosToolStripMenuItem1.Size = new System.Drawing.Size(93, 21);
             this.funcionáriosToolStripMenuItem1.Text = "Funcionários";
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar funcionários";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // exibirToolStripMenuItem
             // 
             this.exibirToolStripMenuItem.Name = "exibirToolStripMenuItem";
-            this.exibirToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.exibirToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
             this.exibirToolStripMenuItem.Text = "Lista de funcionários";
             this.exibirToolStripMenuItem.Click += new System.EventHandler(this.exibirToolStripMenuItem_Click);
             // 
             // nacionalidadeToolStripMenuItem
             // 
             this.nacionalidadeToolStripMenuItem.Name = "nacionalidadeToolStripMenuItem";
-            this.nacionalidadeToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.nacionalidadeToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
             this.nacionalidadeToolStripMenuItem.Text = "Nacionalidade";
             this.nacionalidadeToolStripMenuItem.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem_Click);
             // 
             // naturalidadeToolStripMenuItem
             // 
             this.naturalidadeToolStripMenuItem.Name = "naturalidadeToolStripMenuItem";
-            this.naturalidadeToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.naturalidadeToolStripMenuItem.Size = new System.Drawing.Size(96, 21);
             this.naturalidadeToolStripMenuItem.Text = "Naturalidade";
             this.naturalidadeToolStripMenuItem.Click += new System.EventHandler(this.naturalidadeToolStripMenuItem_Click);
             // 
@@ -95,6 +96,8 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(314, 227);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";

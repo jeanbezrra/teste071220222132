@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace AppModelo.View.Windows
 {
     /// <summary>
-    /// Formulário inicializador do programa.
+    /// Formulário login para entrar no programa.
     /// </summary>
     public partial class frmLogin : Form
     {       

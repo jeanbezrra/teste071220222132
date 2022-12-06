@@ -67,7 +67,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(15, 57);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(55, 20);
+            this.txtId.Size = new System.Drawing.Size(42, 20);
             this.txtId.TabIndex = 2;
             // 
             // txtDescricao

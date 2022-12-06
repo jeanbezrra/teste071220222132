@@ -69,7 +69,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 23);
+            this.label1.Size = new System.Drawing.Size(190, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Lista de Funcionários";
             // 
@@ -114,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
-            this.ClientSize = new System.Drawing.Size(449, 391);
+            this.ClientSize = new System.Drawing.Size(449, 400);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnRemoverFuncionario);
             this.Controls.Add(this.txtId);

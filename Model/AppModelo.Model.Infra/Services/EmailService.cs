@@ -8,7 +8,7 @@ namespace AppModelo.Model.Infra.Services
     public class EmailService
     {
         /// <summary>
-        /// 
+        /// Envia email para o usuário.
         /// </summary>
         /// <param name="nome"></param>
         /// <param name="email"></param>

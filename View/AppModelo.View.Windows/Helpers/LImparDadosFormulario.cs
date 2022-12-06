@@ -6,7 +6,7 @@ namespace AppModelo.View.Windows.Helpers
     internal static partial class Componentes
     {
         /// <summary>
-        /// Método genérico para limpar e esvaziar todos os campos presentes nos formularios que a utilizar. 
+        /// Método genérico para limpar e esvaziar todos os campos presentes nos formularios que utilizá-lo.
         /// </summary>
         /// <param name="texto"></param>
         internal static void LimparDadosForm(Control texto)
@@ -52,10 +52,6 @@ namespace AppModelo.View.Windows.Helpers
                 else if (c is MaskedTextBox)
                 {
                     ((MaskedTextBox)c).Text = "";
-                }
-                else if (c is Label)
-                {
-                    ((Label)c).Text = "";
                 }
                 else if (c is DataGridView)
                 {

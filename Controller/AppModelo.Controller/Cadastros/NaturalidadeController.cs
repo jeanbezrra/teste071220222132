@@ -46,7 +46,7 @@ namespace AppModelo.Controller.Cadastros
             return resposta;
         }
         /// <summary>
-        /// Obtêm todas as naturalidades do banco de dados
+        /// Obtêm todas as naturalidades.
         /// </summary>
         /// <returns>Retorna a requisição feita para a obter todas as naturalidades</returns>
         public List<NaturalidadeEntity> ObterTodasNaturalidades()

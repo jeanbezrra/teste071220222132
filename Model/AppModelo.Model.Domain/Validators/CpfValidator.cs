@@ -3,7 +3,7 @@
     public static partial class Validadores
     {
         /// <summary>
-        /// Validação genérica de cpf.
+        /// Validação genérica do cpf.
         /// </summary>
         public struct Cpf
         {

@@ -81,7 +81,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(15, 60);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(55, 20);
+            this.txtId.Size = new System.Drawing.Size(40, 20);
             this.txtId.TabIndex = 9;
             // 
             // label2

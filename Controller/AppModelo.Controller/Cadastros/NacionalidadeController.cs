@@ -41,7 +41,7 @@ namespace AppModelo.Controller.Cadastros
             return resposta;
         }
         /// <summary>
-        /// Obtêm todas as nacionalidades do banco de dados.
+        /// Obtêm todas as nacionalidades.
         /// </summary>
         /// <returns>Retorna a requisição feita para a obter todas as nacionalidades</returns>
         public List<NacionalidadeEntity> ObterTodasNacionalidades()

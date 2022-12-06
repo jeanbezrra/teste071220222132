@@ -8,7 +8,7 @@ using System.Data;
 namespace AppModelo.Model.Infra.Repositories
 {
     /// <summary>
-    /// Responsavel pela conexão do banco de dados com o programa.
+    /// Conexão da naturalidade com o banco de dados.
     /// </summary>
     public class NaturalidadeRepository
     {
@@ -17,7 +17,7 @@ namespace AppModelo.Model.Infra.Repositories
         /// </summary>
         /// <param name="descricao"></param>
         /// <param name="status"></param>
-        /// <returns>Retorna a requisição feita de inserir a naturalidade pela descrição e seu status</returns>
+        /// <returns>Retorna a requisição feita de inserir a naturalidade pela descrição e o status</returns>
         public bool Inserir(string descricao, bool status)
         {
             var agora = DateTime.Now.ToString("u");

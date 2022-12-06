@@ -7,7 +7,7 @@ using System.Data;
 namespace AppModelo.Model.Infra.Repositories
 {
     /// <summary>
-    /// Responsavel pela conexão do banco de dados com o programa.
+    /// Conexão da nacionalidade com o banco de dados.
     /// </summary>
     public class NacionalidadeRepository
     {

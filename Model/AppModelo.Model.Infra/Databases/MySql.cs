@@ -3,7 +3,7 @@
     public static class MySql
     {
         /// <summary>
-        /// Conecta o banco de dados com o programa.
+        /// String de conexão com o banco de dados.
         /// </summary>
         /// <returns>Retorna a requisição de conexão com o banco de dados</returns>
         public static string ConectionString()

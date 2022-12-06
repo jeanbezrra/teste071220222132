@@ -6,12 +6,12 @@ using System.Data;
 namespace AppModelo.Model.Infra.Repositories
 {
     /// <summary>
-    /// Responsavel pela conexão do banco de dados com o programa.
+    /// Conexão do usuarios com o banco de dados .
     /// </summary>
     public class UsuarioRepository
     {
         /// <summary>
-        /// Verifica se o usuário existe no banco de dados por meio demail e senha.
+        /// Verifica se o usuário existe no banco de dados por meio email e senha.
         /// </summary>
         /// <param name="usuario"></param>
         /// <param name="senha"></param>
@@ -38,7 +38,7 @@ namespace AppModelo.Model.Infra.Repositories
             return resultado;
         }
         /// <summary>
-        /// Atualiza a senha do usuario no banco de dados através do email cadastrado.
+        /// Atualiza a senha do usuário no banco de dados através do email cadastrado.
         /// </summary>
         /// <param name="email"></param>
         /// <param name="novaSenha"></param>

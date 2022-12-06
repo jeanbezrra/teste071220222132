@@ -8,12 +8,12 @@ using System.Data;
 namespace AppModelo.Model.Infra.Repositories
 {
     /// <summary>
-    /// Responsável pela conexão do banco de dados com o programa.
+    /// Conexão do funcionário com o banco de dados.
     /// </summary>
     public class FuncionarioRepository
     {
         /// <summary>
-        /// Inseri um funcionario no banco de dados
+        /// Inseri um funcionário no banco de dados.
         /// </summary>
         /// <param name="naturalidade"></param>
         /// <param name="nacionalidade"></param>
@@ -44,7 +44,7 @@ namespace AppModelo.Model.Infra.Repositories
             return resultado > 0;
         }
         /// <summary>
-        /// Obtêm todos os funcionarios existentes no banco de dados.
+        /// Obtêm todos os funcionários existentes no banco de dados.
         /// </summary>
         /// <returns>Retorna a requisição feita de obter todos os funcionários existentes</returns>
         public IEnumerable<FuncionarioEntity> ObterTodosFuncionarios()
@@ -57,7 +57,7 @@ namespace AppModelo.Model.Infra.Repositories
             return resultado;
         }
         /// <summary>
-        /// Remove um funcionário pelo id informado.
+        /// Remove um funcionário pelo id.
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Retorna a requisição feita de remover o funcionário pelo id</returns>

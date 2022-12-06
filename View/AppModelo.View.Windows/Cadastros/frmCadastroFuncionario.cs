@@ -42,10 +42,7 @@ namespace AppModelo.View.Windows.Cadastros
         /// <param name="e"></param>
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
-            //Crio a instancia do Controllador
             var cepController = new ViaCepController();
-
-            //Recebo os dados do metodo obter para o endereço
             var endereco = cepController.Obter(txtEnderecoCep.Text);
 
             txtEnderecoBairro.Text = endereco.Bairro;
@@ -93,7 +90,7 @@ namespace AppModelo.View.Windows.Cadastros
             errorProvider.Clear();
         }
         /// <summary>
-        /// Seleção da naturalidade.
+        /// ComboBox para seleção de naturalidade.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -103,7 +100,7 @@ namespace AppModelo.View.Windows.Cadastros
             string Index = cmbNaturalidade.Text;
         }
         /// <summary>
-        /// Seleção da nacionalidade.
+        /// ComboBox para seleção de nacionalidade.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -127,7 +124,7 @@ namespace AppModelo.View.Windows.Cadastros
 
                 var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
                 
-                MessageBox.Show("Salvo com sucesso");
+                MessageBox.Show("Cadastrado com sucesso");
 
                 Componentes.LimparDadosForm(this);
             }

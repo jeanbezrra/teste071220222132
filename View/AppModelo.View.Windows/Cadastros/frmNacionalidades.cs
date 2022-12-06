@@ -9,6 +9,9 @@ namespace AppModelo.View.Windows.Cadastros
     /// </summary>
     public partial class frmNacionalidades : Form
     {
+        /// <summary>
+        /// Instância de classe NacionalidadeController. 
+        /// </summary>
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         public frmNacionalidades()
         {
@@ -40,7 +43,8 @@ namespace AppModelo.View.Windows.Cadastros
                     errorProvider1.Clear();
                 }
                 errorProvider1.Clear();
-                var salvou = _nacionalidadeController.Cadastrar(txtDescricao.Text);
+                var descricaoMaiuscula = txtDescricao.Text.ToUpper();
+                var salvou = _nacionalidadeController.Cadastrar(descricaoMaiuscula);
                 if (salvou)
                 {
                     MessageBox.Show("Nacionalidade incluída com sucesso");
@@ -75,7 +79,8 @@ namespace AppModelo.View.Windows.Cadastros
             }
             else
             {
-                var atualizou = _nacionalidadeController.Atualizar(txtDescricao.Text, txtId.Text);
+                var descricaoMaiuscula = txtDescricao.Text.ToUpper();
+                var atualizou = _nacionalidadeController.Atualizar(descricaoMaiuscula, txtId.Text);
                 if (atualizou)
                 {
                     MessageBox.Show("Nacionalidade atualizada com sucesso");
