@@ -120,10 +120,9 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gvListaFuncionarios);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmListaFuncionarios";
-            this.Text = "Lista de Funcionários";
             ((System.ComponentModel.ISupportInitialize)(this.gvListaFuncionarios)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

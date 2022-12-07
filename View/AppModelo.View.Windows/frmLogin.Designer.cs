@@ -46,6 +46,9 @@
             // 
             this.btnLogar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
             this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(101)))));
+            this.btnLogar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogar.Location = new System.Drawing.Point(74, 350);
             this.btnLogar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

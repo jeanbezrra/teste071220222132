@@ -1,16 +1,19 @@
-﻿
-using AppModelo.View.Windows.Cadastros;
+﻿using AppModelo.View.Windows.Cadastros;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows
 {
-    /// <summary>
-    /// Formulário Principal do sistema com todos formulários de cadastros.
-    /// </summary>
-    public partial class frmPrincipal : Form
+    public partial class frmMenu : Form
     {
-        public frmPrincipal()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -19,7 +22,7 @@ namespace AppModelo.View.Windows
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCadastroFunc_Click(object sender, EventArgs e)
         {
             var form = new frmCadastroFuncionario();
             form.MdiParent = this;
@@ -30,7 +33,7 @@ namespace AppModelo.View.Windows
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void exibirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnListaFunc_Click(object sender, EventArgs e)
         {
             var form = new frmListaFuncionarios();
             form.MdiParent = this;
@@ -41,7 +44,7 @@ namespace AppModelo.View.Windows
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void naturalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnNaturalidades_Click(object sender, EventArgs e)
         {
             var form = new frmNaturalidade();
             form.MdiParent = this;
@@ -52,11 +55,16 @@ namespace AppModelo.View.Windows
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void nacionalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnNacionalidades_Click(object sender, EventArgs e)
         {
             var form = new frmNacionalidades();
             form.MdiParent = this;
             form.Show();
-        }       
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -125,7 +125,7 @@ namespace AppModelo.View.Windows.Cadastros
                     }
                 }
             }
-            catch(Exception err)
+            catch
             {
                 MessageBox.Show("ERRO, verifique se o ID já está vinculado a um funcionario! ");
             }
@@ -153,6 +153,6 @@ namespace AppModelo.View.Windows.Cadastros
                     ((TextBox)c).Text = "";
                 }
             }
-        }
+        }        
     }
 }

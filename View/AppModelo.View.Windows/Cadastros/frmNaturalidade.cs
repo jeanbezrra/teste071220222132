@@ -125,7 +125,7 @@ namespace AppModelo.View.Windows.Cadastros
                     }
                 }
             }
-            catch (Exception err)
+            catch
             {
                 MessageBox.Show("ERRO, verifique se o ID já está vinculado a um funcionário! ");
             }
@@ -153,6 +153,11 @@ namespace AppModelo.View.Windows.Cadastros
                     ((TextBox)c).Text = "";
                 }
             }
+        }
+
+        private void frmNaturalidade_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

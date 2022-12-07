@@ -36,7 +36,7 @@ namespace AppModelo.View.Windows
             var usuarioEncontrado = controller.EfetuarLogin(txtEmail.Text, txtSenha.Text);
             if (usuarioEncontrado)
             {
-                var form = new frmPrincipal();
+                var form = new frmMenu();
                 form.Show();
                 this.Hide();
             }

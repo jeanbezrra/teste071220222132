@@ -90,7 +90,8 @@
             // 
             this.btnSalvar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Location = new System.Drawing.Point(241, 97);
             this.btnSalvar.Name = "btnSalvar";
@@ -126,6 +127,7 @@
             // 
             this.btnRemoverNacionalidade.BackColor = System.Drawing.SystemColors.Control;
             this.btnRemoverNacionalidade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverNacionalidade.FlatAppearance.BorderSize = 0;
             this.btnRemoverNacionalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverNacionalidade.ForeColor = System.Drawing.Color.Black;
             this.btnRemoverNacionalidade.Location = new System.Drawing.Point(241, 268);
@@ -140,6 +142,7 @@
             // 
             this.btnAtualizarNacionalidade.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnAtualizarNacionalidade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizarNacionalidade.FlatAppearance.BorderSize = 0;
             this.btnAtualizarNacionalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizarNacionalidade.ForeColor = System.Drawing.Color.Black;
             this.btnAtualizarNacionalidade.Location = new System.Drawing.Point(138, 268);
@@ -159,6 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(333, 303);
             this.Controls.Add(this.btnAtualizarNacionalidade);
             this.Controls.Add(this.btnRemoverNacionalidade);
@@ -169,11 +173,10 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmNacionalidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Nacionalidades";
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

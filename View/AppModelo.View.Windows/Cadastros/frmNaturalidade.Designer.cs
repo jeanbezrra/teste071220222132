@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNaturalidade));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -102,15 +103,23 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(255)))));
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(388, 100);
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(376, 100);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(84, 31);
             this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
@@ -144,27 +153,43 @@
             // 
             // btnAtualizarNaturalidade
             // 
-            this.btnAtualizarNaturalidade.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAtualizarNaturalidade.BackColor = System.Drawing.Color.Transparent;
             this.btnAtualizarNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizarNaturalidade.FlatAppearance.BorderSize = 0;
+            this.btnAtualizarNaturalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAtualizarNaturalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
             this.btnAtualizarNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(295, 316);
+            this.btnAtualizarNaturalidade.Font = new System.Drawing.Font("Tahoma", 8.150944F, System.Drawing.FontStyle.Bold);
+            this.btnAtualizarNaturalidade.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAtualizarNaturalidade.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizarNaturalidade.Image")));
+            this.btnAtualizarNaturalidade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(251, 316);
             this.btnAtualizarNaturalidade.Name = "btnAtualizarNaturalidade";
-            this.btnAtualizarNaturalidade.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizarNaturalidade.Size = new System.Drawing.Size(100, 31);
             this.btnAtualizarNaturalidade.TabIndex = 16;
             this.btnAtualizarNaturalidade.Text = "Atualizar";
+            this.btnAtualizarNaturalidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtualizarNaturalidade.UseVisualStyleBackColor = false;
             this.btnAtualizarNaturalidade.Click += new System.EventHandler(this.btnAtualizarNaturalidade_Click);
             // 
             // btnRemoverNaturalidade
             // 
-            this.btnRemoverNaturalidade.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoverNaturalidade.BackColor = System.Drawing.Color.Transparent;
             this.btnRemoverNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverNaturalidade.FlatAppearance.BorderSize = 0;
+            this.btnRemoverNaturalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRemoverNaturalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnRemoverNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoverNaturalidade.Location = new System.Drawing.Point(388, 316);
+            this.btnRemoverNaturalidade.Font = new System.Drawing.Font("Tahoma", 8.150944F, System.Drawing.FontStyle.Bold);
+            this.btnRemoverNaturalidade.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRemoverNaturalidade.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoverNaturalidade.Image")));
+            this.btnRemoverNaturalidade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoverNaturalidade.Location = new System.Drawing.Point(368, 316);
             this.btnRemoverNaturalidade.Name = "btnRemoverNaturalidade";
-            this.btnRemoverNaturalidade.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverNaturalidade.Size = new System.Drawing.Size(92, 31);
             this.btnRemoverNaturalidade.TabIndex = 15;
             this.btnRemoverNaturalidade.Text = "Remover";
+            this.btnRemoverNaturalidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRemoverNaturalidade.UseVisualStyleBackColor = false;
             this.btnRemoverNaturalidade.Click += new System.EventHandler(this.btnRemoverNaturalidade_Click);
             // 
@@ -173,6 +198,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(478, 359);
             this.Controls.Add(this.btnAtualizarNaturalidade);
             this.Controls.Add(this.btnRemoverNaturalidade);
@@ -184,11 +210,12 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmNaturalidade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Naturalidades";
+            this.Load += new System.EventHandler(this.frmNaturalidade_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).EndInit();

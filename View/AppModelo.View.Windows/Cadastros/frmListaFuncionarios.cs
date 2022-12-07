@@ -108,6 +108,6 @@ namespace AppModelo.View.Windows.Cadastros
                     ((TextBox)c).Text = "";
                 }
             }
-        }     
+        }
     }
 }
