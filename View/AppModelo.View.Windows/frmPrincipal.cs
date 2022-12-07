@@ -57,6 +57,6 @@ namespace AppModelo.View.Windows
             var form = new frmNacionalidades();
             form.MdiParent = this;
             form.Show();
-        }      
+        }       
     }
 }

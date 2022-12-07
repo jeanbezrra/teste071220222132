@@ -49,7 +49,6 @@ namespace AppModelo.View.Windows.Cadastros
                 {
                     MessageBox.Show("Nacionalidade incluída com sucesso");
                     txtDescricao.Text = string.Empty;
-                    limparDados(this);
                     AtualizarDataGrid();
                 }
                 else
@@ -57,6 +56,7 @@ namespace AppModelo.View.Windows.Cadastros
                     MessageBox.Show("Houve um erro ao salvar no banco de dados");
                 }
             }
+            limparDados(this);
             errorProvider1.Clear();
         }
         /// <summary>
@@ -92,6 +92,7 @@ namespace AppModelo.View.Windows.Cadastros
                     MessageBox.Show("Houve um erro ao atualizar no banco de dados");                   
                 }
             }
+            limparDados(this);
             errorProvider1.Clear();
         }
         /// <summary>
@@ -101,25 +102,34 @@ namespace AppModelo.View.Windows.Cadastros
         /// <param name="e"></param>
         private void btnRemoverNacionalidade_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtId.Text))
+            try
             {
-                errorProvider1.SetError(txtId, "Digite o ID para remover a nacionalidade");
-                return;
-            }
-            else
-            {
-                var removeu = _nacionalidadeController.Remover(txtId.Text);
-                if (removeu)
+                if (String.IsNullOrWhiteSpace(txtId.Text))
                 {
-                    MessageBox.Show("Nacionalidade removida com sucesso");
-                    txtId.Text = string.Empty;
-                    AtualizarDataGrid();
+                    errorProvider1.SetError(txtId, "Digite o ID para remover a nacionalidade");
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Houve um erro ao remover no banco de dados");
+                    var removeu = _nacionalidadeController.Remover(txtId.Text);
+
+                    if (removeu)
+                    {
+                        MessageBox.Show("Nacionalidade removida com sucesso");
+                        txtId.Text = string.Empty;
+                        AtualizarDataGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Houve um erro ao remover no banco de dados");
+                    }
                 }
             }
+            catch(Exception err)
+            {
+                MessageBox.Show("ERRO, verifique se o ID já está vinculado a um funcionario! ");
+            }
+            limparDados(this);
             errorProvider1.Clear();
         }
         /// <summary>

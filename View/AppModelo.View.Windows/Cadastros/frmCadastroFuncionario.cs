@@ -125,12 +125,11 @@ namespace AppModelo.View.Windows.Cadastros
                 var salvou = _funcionarioController.Cadastrar(obterNaturalidade, obterNacionalidade, txtNome.Text, dataNascimento, rbFeminino.Checked, txtCpf.Text, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
                 
                 MessageBox.Show("Cadastrado com sucesso");
-
                 Componentes.LimparDadosForm(this);
             }
-            catch (Exception err)
+            catch
             {
-                MessageBox.Show("Erro! Verifique se todos os campos obrigatórios estão preenchidos corretamente. " + err.Message);
+                MessageBox.Show("Erro! Verifique se todos os campos obrigatórios estão preenchidos corretamente.");
             }
         }
     }

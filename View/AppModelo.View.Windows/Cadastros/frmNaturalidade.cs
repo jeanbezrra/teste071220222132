@@ -47,8 +47,7 @@ namespace AppModelo.View.Windows.Cadastros
                 if (salvou)
                 {
                     MessageBox.Show("Naturalidade incluída com sucesso");
-                    txtDescricao.Text = string.Empty;
-                    limparDados(this);
+                    txtDescricao.Text = string.Empty;                    
                     AtualizarDataGrid();
                 }
                 else
@@ -56,6 +55,7 @@ namespace AppModelo.View.Windows.Cadastros
                     MessageBox.Show("Houve um erro ao salvar no banco de dados");
                 }
             }
+            limparDados(this);
             errorProvider2.Clear();
         }
         /// <summary>
@@ -67,26 +67,25 @@ namespace AppModelo.View.Windows.Cadastros
         {
             if (String.IsNullOrWhiteSpace(txtId.Text))
             {
-                errorProvider2.SetError(txtId, "Digite o ID para atualizar");               
+                errorProvider2.SetError(txtId, "Digite o ID para atualizar");
                 return;
             }
             errorProvider2.Clear();
 
             if (String.IsNullOrWhiteSpace(txtDescricao.Text))
             {
-                errorProvider2.SetError(txtDescricao, "Digite a naturalidade para atualizá-la");         
+                errorProvider2.SetError(txtDescricao, "Digite a naturalidade para atualizá-la");
                 return;
             }
             else
-            {               
+            {
                 var descricaoMaiuscula = txtDescricao.Text.ToUpper();
                 var atualizou = _naturalidadeController.Atualizar(descricaoMaiuscula, txtId.Text);
 
                 if (atualizou)
                 {
                     MessageBox.Show("Naturalidade atualizada com sucesso");
-                    txtDescricao.Text = string.Empty;
-                    limparDados(this);
+                    txtDescricao.Text = string.Empty;                    
                     AtualizarDataGrid();
                 }
                 else
@@ -94,6 +93,7 @@ namespace AppModelo.View.Windows.Cadastros
                     MessageBox.Show("Houve um erro ao atualizar no banco de dados");
                 }
             }
+            limparDados(this);
             errorProvider2.Clear();
         }
         /// <summary>
@@ -103,25 +103,33 @@ namespace AppModelo.View.Windows.Cadastros
         /// <param name="e"></param>
         private void btnRemoverNaturalidade_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtId.Text))
+            try
             {
-                errorProvider2.SetError(txtId, "Digite o ID para remover a naturalidade");
-                return;
-            }
-            else
-            {
-                var removeu = _naturalidadeController.Remover(txtId.Text);
-                if (removeu)
+                if (String.IsNullOrWhiteSpace(txtId.Text))
                 {
-                    MessageBox.Show("Naturalidade removida com sucesso");
-                    txtId.Text = string.Empty;
-                    AtualizarDataGrid();
+                    errorProvider2.SetError(txtId, "Digite o ID para remover a naturalidade");
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Houve um erro ao remover no banco de dados");
+                    var removeu = _naturalidadeController.Remover(txtId.Text);
+                    if (removeu)
+                    {
+                        MessageBox.Show("Naturalidade removida com sucesso");
+                        txtId.Text = string.Empty;                        
+                        AtualizarDataGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Houve um erro ao remover no banco de dados");
+                    }
                 }
             }
+            catch (Exception err)
+            {
+                MessageBox.Show("ERRO, verifique se o ID já está vinculado a um funcionário! ");
+            }
+            limparDados(this);
             errorProvider2.Clear();
         }
         /// <summary>
