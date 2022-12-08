@@ -65,16 +65,18 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(11, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 25);
+            this.label3.Size = new System.Drawing.Size(176, 23);
             this.label3.TabIndex = 17;
             this.label3.Text = "Lista de naturalidades";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.Size = new System.Drawing.Size(19, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Id";
             // 
@@ -82,15 +84,17 @@
             // 
             this.txtId.Location = new System.Drawing.Point(15, 60);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(40, 20);
+            this.txtId.Size = new System.Drawing.Size(40, 21);
             this.txtId.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Descrição";
             // 
@@ -98,25 +102,25 @@
             // 
             this.txtDescricao.Location = new System.Drawing.Point(15, 102);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(281, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(281, 21);
             this.txtDescricao.TabIndex = 11;
             // 
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(255)))));
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 8.150944F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(376, 100);
+            this.btnSalvar.Location = new System.Drawing.Point(382, 100);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(84, 31);
+            this.btnSalvar.Size = new System.Drawing.Size(78, 31);
             this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,12 +130,13 @@
             // gvNaturalidades
             // 
             this.gvNaturalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.gvNaturalidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gvNaturalidades.BackgroundColor = System.Drawing.Color.Gray;
+            this.gvNaturalidades.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNaturalidades.Location = new System.Drawing.Point(12, 136);
+            this.gvNaturalidades.Location = new System.Drawing.Point(15, 136);
             this.gvNaturalidades.Name = "gvNaturalidades";
             this.gvNaturalidades.RowHeadersWidth = 45;
-            this.gvNaturalidades.Size = new System.Drawing.Size(448, 160);
+            this.gvNaturalidades.Size = new System.Drawing.Size(445, 160);
             this.gvNaturalidades.TabIndex = 13;
             // 
             // chkStatus
@@ -140,9 +145,11 @@
             this.chkStatus.Checked = true;
             this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkStatus.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkStatus.ForeColor = System.Drawing.Color.White;
             this.chkStatus.Location = new System.Drawing.Point(320, 106);
             this.chkStatus.Name = "chkStatus";
-            this.chkStatus.Size = new System.Drawing.Size(50, 17);
+            this.chkStatus.Size = new System.Drawing.Size(56, 17);
             this.chkStatus.TabIndex = 14;
             this.chkStatus.Text = "Ativo";
             this.chkStatus.UseVisualStyleBackColor = true;
@@ -157,15 +164,15 @@
             this.btnAtualizarNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarNaturalidade.FlatAppearance.BorderSize = 0;
             this.btnAtualizarNaturalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAtualizarNaturalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.btnAtualizarNaturalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(208)))), ((int)(((byte)(0)))));
             this.btnAtualizarNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizarNaturalidade.Font = new System.Drawing.Font("Tahoma", 8.150944F, System.Drawing.FontStyle.Bold);
             this.btnAtualizarNaturalidade.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAtualizarNaturalidade.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizarNaturalidade.Image")));
             this.btnAtualizarNaturalidade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(251, 316);
+            this.btnAtualizarNaturalidade.Location = new System.Drawing.Point(257, 316);
             this.btnAtualizarNaturalidade.Name = "btnAtualizarNaturalidade";
-            this.btnAtualizarNaturalidade.Size = new System.Drawing.Size(100, 31);
+            this.btnAtualizarNaturalidade.Size = new System.Drawing.Size(94, 30);
             this.btnAtualizarNaturalidade.TabIndex = 16;
             this.btnAtualizarNaturalidade.Text = "Atualizar";
             this.btnAtualizarNaturalidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -178,7 +185,7 @@
             this.btnRemoverNaturalidade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoverNaturalidade.FlatAppearance.BorderSize = 0;
             this.btnRemoverNaturalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemoverNaturalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnRemoverNaturalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(18)))), ((int)(((byte)(0)))));
             this.btnRemoverNaturalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverNaturalidade.Font = new System.Drawing.Font("Tahoma", 8.150944F, System.Drawing.FontStyle.Bold);
             this.btnRemoverNaturalidade.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -186,7 +193,7 @@
             this.btnRemoverNaturalidade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemoverNaturalidade.Location = new System.Drawing.Point(368, 316);
             this.btnRemoverNaturalidade.Name = "btnRemoverNaturalidade";
-            this.btnRemoverNaturalidade.Size = new System.Drawing.Size(92, 31);
+            this.btnRemoverNaturalidade.Size = new System.Drawing.Size(92, 30);
             this.btnRemoverNaturalidade.TabIndex = 15;
             this.btnRemoverNaturalidade.Text = "Remover";
             this.btnRemoverNaturalidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -198,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(478, 359);
             this.Controls.Add(this.btnAtualizarNaturalidade);
             this.Controls.Add(this.btnRemoverNaturalidade);
@@ -210,12 +217,12 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmNaturalidade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmNaturalidade_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).EndInit();

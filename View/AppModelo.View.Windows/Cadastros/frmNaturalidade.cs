@@ -153,11 +153,6 @@ namespace AppModelo.View.Windows.Cadastros
                     ((TextBox)c).Text = "";
                 }
             }
-        }
-
-        private void frmNaturalidade_Load(object sender, EventArgs e)
-        {
-
-        }
+        }       
     }
 }

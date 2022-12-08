@@ -117,6 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRemoverFuncionario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DgAACw4BQL7hQQAAALVJREFUOE9jwAX+//8/HYixgU9ArAJVhh0AFSwE4t1o+DcQ4wI3gRhdvTPUOLCB
+        1AANUONwupBUjHAhTQDQhv1ATC5wgBqDAEBBmhp4GojPQJhgsB6IX0CY//8C8RwoDQMEDUyAYhhQBOIF
+        EOb/B1D1DyBcMCDZQAUgng9h/r8PVX8fwgWDUQOBACg4aiCKgRSnQ1AuoTinrIbIkQW0oMYgAFBQB4iv
+        gqWJB1+BuAtqBBAwMAAAAcFWguNdZncAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

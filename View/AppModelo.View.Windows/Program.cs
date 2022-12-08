@@ -1,5 +1,4 @@
-﻿using AppModelo.View.Windows.Cadastros;
-using System;
+﻿using System;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -21,7 +20,7 @@ namespace AppModelo.View.Windows
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNaturalidade());
+            Application.Run(new frmLogin());
 
             Environment.Exit(-1);
         }
